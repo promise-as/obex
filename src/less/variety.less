@@ -1,0 +1,352 @@
+/*交易品种css*/
+
+/*容器宽度*/
+.container {
+  width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  //border: 1px solid pink;
+}
+
+/*自定义滚动条*/
+.variety_warp{
+  position: relative;
+  height: 100%;
+  overflow-y: auto;
+  z-index: 300;
+  &::-webkit-scrollbar {
+    width: 16px;
+    //z-index: 300;
+  }
+  /*定义滚动条轨道 内阴影+圆角*/
+  &::-webkit-scrollbar-track
+  {
+    background-color: #f1f1f1;
+  }
+  /*定义滑块 内阴影+圆角*/
+  &::-webkit-scrollbar-thumb
+  {
+    background-color: #999999;
+  }
+}
+
+/*交易品种*/
+.variety_warp{
+  /*头部*/
+  .variety_header{
+    /*导航条*/
+    .nav_bar {
+      width: 100%;
+      height: 60px;
+      background-color: #000000;
+      position: fixed;
+      top: 0;
+      //left: 0;
+      z-index: 200;
+      box-shadow: 0 2px 2px rgba(0, 0, 0, .2);
+      .container {
+        display: flex;
+        justify-content: space-between;
+        .logo {
+          > a {
+            width: 118px;
+            height: 24px;
+            //border: 1px solid pink;
+            margin-top: 18px;
+            background: url("../images/logo/home_logo.png") no-repeat;
+            text-indent: -9999px;
+          }
+        }
+        .nav {
+          //border: 1px solid red;
+          display: flex;
+          //justify-content: center;
+          //align-items: center;
+          li {
+            height: 60px;
+            padding: 0 35px;
+            //border: 1px solid blue;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            a {
+              //border: 1px solid blue;
+              //height: 60px;
+              > span {
+                color: white;
+                display: block;
+                //padding: 0 35px;
+                //line-height: 60px;
+                //border: 1px solid red;
+                &.active {
+                  color: #ffe6b5;
+                }
+              }
+              > em {
+                display: none;
+                //width: 30px;
+                //width: 100%;
+                height: 1px;
+                //border-radius: 50%;
+                background-color: white;
+                position: relative;
+                top: 6px;
+                left: 0;
+                right: 0;
+                margin: auto;
+                &.active {
+                  display: block;
+                  background-color: #ffe6b5;
+                }
+              }
+              &:hover {
+                > span {
+                  color: #ffe6b5;
+                }
+                > em {
+                  display: block;
+                  background-color: #ffe6b5;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    /*banner*/
+    .variety_banner{
+      width: 100%;
+      background: url("../images/bg/bg_risk.png") no-repeat;
+      margin-top: 60px;
+      .container {
+        //border: 1px solid #ffffff;
+        height: 420px;
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: center;
+        align-items: center;
+        color: #ffe6b5;
+        .banner_h2 {
+          font-size: 72px;
+          font-weight: bold;
+        }
+        > p {
+          font-size: 24px;
+          margin-top: 30px;
+        }
+      }
+    }
+  }
+  /*品种类型*/
+  .variety_type{
+    .container{
+      //border: 1px solid #000;
+      margin-top: 150px;
+      .variety_item{
+        //border: 1px solid black;
+        background-color: #eeeeee;
+        border-radius: 8px;
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 55px;
+        .item_img{
+          width: 500px;
+          height: 374px;
+          //border: 1px solid blue;
+          border-top-right-radius: 8px;
+          background: url("../images/img/platform_img_dig.png") no-repeat;
+          text-indent: -9999px;
+        }
+        .item_content{
+          flex: 1;
+          .content_detail{
+            //border: 1px solid red;
+            margin-top: 80px;
+            margin-right: 100px;
+            margin-left: 100px;
+            > h3{
+              font-size: 24px;
+              font-weight: bold;
+              color: #1b1b1b;
+              margin-bottom: 18px;
+              > span{
+                font-weight: bold;
+                color: #585858;
+              }
+            }
+            > p{
+              font-size: 14px;
+              color: #585858;
+              line-height: 24px;
+            }
+            .detail_more{
+              display: block;
+              width:200px;
+              height:50px;
+              border: 1px solid #1b1b1b;
+              border-radius:25px;
+              margin-top: 30px;
+              text-align: center;
+              line-height: 50px;
+              color: #1b1b1b;
+              cursor: pointer;
+              margin-left: auto;
+              &:hover{
+                background-color: #1b1b1b;
+                color: #ffe6b5;
+              }
+            }
+          }
+        }
+
+        &:nth-child(2){
+          .item_img{
+            width: 500px;
+            height: 374px;
+            background: url("../images/img/platform_img_oil.png") no-repeat;
+          }
+          .item_content{
+            .content_detail{
+              > h3{
+                text-align: right;
+              }
+            }
+          }
+        }
+        &:nth-child(3){
+          .item_img{
+            width: 500px;
+            height: 374px;
+            background: url("../images/img/platform_img_forex.png") no-repeat;
+          }
+          .item_content{
+            .content_detail{
+              .detail_more{
+                margin-left: 0;
+                margin-right: auto;
+              }
+            }
+          }
+        }
+        &:nth-child(4){
+          .item_img{
+            width: 500px;
+            height: 374px;
+            background: url("../images/img/platform_img_gold.png") no-repeat;
+          }
+          .item_content{
+            .content_detail{
+              .detail_more{
+                //margin-left: 0;
+                //margin-right: auto;
+              }
+              > h3{
+                text-align: right;
+              }
+            }
+          }
+        }
+        &:nth-child(5){
+          margin-bottom: 150px;
+          .item_img{
+            width: 500px;
+            height: 374px;
+            background: url("../images/img/platform_img_cfd.png") no-repeat;
+          }
+          .item_content{
+            .content_detail{
+              .detail_more{
+                margin-left: 0;
+                margin-right: auto;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  /*底部*/
+  .footer {
+    width: 100%;
+    background-color: #1b1b1b;
+    .container {
+      //border: 1px solid #000;
+      .footer_main {
+        display: flex;
+        justify-content: space-between;
+        padding-top: 50px;
+        margin-bottom: 30px;
+        > div {
+          font-size: 14px;
+          line-height: 24px;
+          > a {
+            color: #eeeeee;
+            white-space: nowrap;
+            &:first-child {
+              color: white;
+            }
+            &:hover {
+              color: #ffe6b5;
+            }
+          }
+          > p {
+            color: #eeeeee;
+          }
+        }
+        .footer_logo {
+          > a {
+            width: 87px;
+            height: 25px;
+            //border: 1px solid pink;
+            background: url("../images/logo/home_logo.png") no-repeat;
+            text-indent: -9999px;
+          }
+        }
+        .footer_risk {
+          width: 550px;
+          //height: 135px;
+        }
+        .footer_help {
+          width: 56px;
+          height: 134px;
+        }
+        .footer_account {
+          width: 57px;
+          height: 86px;
+        }
+        .footer_about_us {
+          width: 56px;
+          height: 110px;
+        }
+      }
+      .footer_policy {
+        //border: 1px solid white;
+        margin-top: 30px;
+        margin-bottom: 30px;
+        font-size: 14px;
+        line-height: 24px;
+        > h3 {
+          color: white;
+        }
+        > p {
+          color: #eeeeee;
+        }
+      }
+    }
+    .footer_line {
+      width: 100%;
+      height: 1px;
+      background-color: #ffe6b5;
+    }
+    .footer_address {
+      font-style: normal;
+      color: white;
+      background-color: black;
+      p {
+        text-align: center;
+        height: 74px;
+        line-height: 74px;
+      }
+    }
+  }
+}

@@ -1,0 +1,373 @@
+/*交易平台css*/
+/*容器宽度*/
+.container {
+  width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+/*自定义滚动条*/
+.platform_warp {
+  position: relative;
+  height: 100%;
+  overflow-y: auto;
+  z-index: 300;
+  /*定义滚动条轨道 内阴影+圆角*/
+  /*定义滑块 内阴影+圆角*/
+}
+.platform_warp::-webkit-scrollbar {
+  width: 16px;
+}
+.platform_warp::-webkit-scrollbar-track {
+  background-color: #f1f1f1;
+}
+.platform_warp::-webkit-scrollbar-thumb {
+  background-color: #999999;
+}
+/*交易平台*/
+.platform_warp {
+  /*头部*/
+  /*PC和app*/
+  /*底部*/
+}
+.platform_warp .platform_header {
+  /*导航条*/
+  /*banner*/
+}
+.platform_warp .platform_header .nav_bar {
+  width: 100%;
+  height: 60px;
+  background-color: #000000;
+  position: fixed;
+  top: 0;
+  z-index: 200;
+  -webkit-box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+}
+.platform_warp .platform_header .nav_bar .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.platform_warp .platform_header .nav_bar .container .logo > a {
+  width: 118px;
+  height: 24px;
+  margin-top: 18px;
+  background: url("../images/logo/home_logo.png") no-repeat;
+  text-indent: -9999px;
+}
+.platform_warp .platform_header .nav_bar .container .nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.platform_warp .platform_header .nav_bar .container .nav li {
+  height: 60px;
+  padding: 0 35px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.platform_warp .platform_header .nav_bar .container .nav li a > span {
+  color: white;
+  display: block;
+}
+.platform_warp .platform_header .nav_bar .container .nav li a > span.active {
+  color: #ffe6b5;
+}
+.platform_warp .platform_header .nav_bar .container .nav li a > em {
+  display: none;
+  height: 1px;
+  background-color: white;
+  position: relative;
+  top: 6px;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+.platform_warp .platform_header .nav_bar .container .nav li a > em.active {
+  display: block;
+  background-color: #ffe6b5;
+}
+.platform_warp .platform_header .nav_bar .container .nav li a:hover > span {
+  color: #ffe6b5;
+}
+.platform_warp .platform_header .nav_bar .container .nav li a:hover > em {
+  display: block;
+  background-color: #ffe6b5;
+}
+.platform_warp .platform_header .platform_banner {
+  width: 100%;
+  background: url("../images/bg/bg_risk.png") #0E48B4 no-repeat;
+  margin-top: 60px;
+}
+.platform_warp .platform_header .platform_banner .container {
+  height: 420px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #ffe6b5;
+}
+.platform_warp .platform_header .platform_banner .container .banner_h2 {
+  font-size: 72px;
+  font-weight: bold;
+}
+.platform_warp .platform_header .platform_banner .container > p {
+  font-size: 24px;
+  margin-top: 30px;
+}
+.platform_warp .platform_versions .container .platform_pc .pc_container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-top: 150px;
+  -webkit-box-shadow: 0px 3px 26px 2px rgba(14, 72, 180, 0.08);
+          box-shadow: 0px 3px 26px 2px rgba(14, 72, 180, 0.08);
+  border-radius: 10px;
+}
+.platform_warp .platform_versions .container .platform_pc .pc_container .platform_pc_img {
+  width: 600px;
+  height: 464px;
+  background: url("../images/img/trade_img_pc.png") no-repeat;
+}
+.platform_warp .platform_versions .container .platform_pc .pc_container .platform_pc_content {
+  width: 460px;
+  height: 350px;
+  padding-top: 52px;
+  padding-right: 52px;
+}
+.platform_warp .platform_versions .container .platform_pc .pc_container .platform_pc_content .pc_content_detail > h3 {
+  color: #1b1b1b;
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+.platform_warp .platform_versions .container .platform_pc .pc_container .platform_pc_content .pc_content_detail > p {
+  color: #505050;
+  font-size: 14px;
+  line-height: 24px;
+}
+.platform_warp .platform_versions .container .platform_pc .pc_container .platform_pc_content .pc_versions_download {
+  width: 200px;
+  height: 70px;
+  border: 1px solid #1b1b1b;
+  border-radius: 35px;
+  margin-top: 52px;
+  color: #1b1b1b;
+  text-align: center;
+  line-height: 70px;
+  cursor: pointer;
+}
+.platform_warp .platform_versions .container .platform_pc .pc_container .platform_pc_content .pc_versions_download:hover {
+  background: #1b1b1b;
+  color: white;
+}
+.platform_warp .platform_versions .container .platform_app .app_container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-top: 130px;
+  -webkit-box-shadow: 0px 3px 26px 2px rgba(14, 72, 180, 0.08);
+          box-shadow: 0px 3px 26px 2px rgba(14, 72, 180, 0.08);
+  border-radius: 10px;
+  margin-bottom: 150px;
+}
+.platform_warp .platform_versions .container .platform_app .app_container .platform_app_img {
+  width: 600px;
+  height: 377px;
+  background: url("../images/img/trade_img_app.png") no-repeat;
+}
+.platform_warp .platform_versions .container .platform_app .app_container .platform_app_content {
+  width: 460px;
+  padding-top: 52px;
+  padding-right: 52px;
+}
+.platform_warp .platform_versions .container .platform_app .app_container .platform_app_content .app_content_detail > h3 {
+  color: #1b1b1b;
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+.platform_warp .platform_versions .container .platform_app .app_container .platform_app_content .app_content_detail > p {
+  color: #585858;
+  font-size: 14px;
+  line-height: 24px;
+}
+.platform_warp .platform_versions .container .platform_app .app_container .platform_app_content .app_versions_download {
+  width: 200px;
+  height: 70px;
+  border: 1px solid #1b1b1b;
+  border-radius: 35px;
+  margin-top: 52px;
+  color: #1b1b1b;
+  text-align: center;
+  line-height: 70px;
+  cursor: pointer;
+}
+.platform_warp .platform_versions .container .platform_app .app_container .platform_app_content .app_versions_download:hover {
+  background: #1b1b1b;
+  color: white;
+}
+.platform_warp .platform_versions .container .platform_app .app_container .platform_app_content {
+  padding-left: 52px;
+  padding-right: 85px;
+}
+.platform_warp .platform_versions .container .platform_app .app_container .platform_app_content .app_content_detail > h3 {
+  color: #1b1b1b;
+  font-weight: bold;
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+.platform_warp .platform_versions .container .platform_app .app_container .platform_app_content .app_content_detail > p {
+  color: #585858;
+  font-size: 14px;
+  line-height: 24px;
+}
+.platform_warp .platform_versions .container .platform_app .app_container .platform_app_content .app_download {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.platform_warp .platform_versions .container .platform_app .app_container .platform_app_content .app_download > div {
+  width: 200px;
+  height: 70px;
+  border: 1px solid #1b1b1b;
+  border-radius: 35px;
+  margin-top: 34px;
+  color: #1b1b1b;
+  text-align: center;
+  line-height: 70px;
+  cursor: pointer;
+}
+.platform_warp .platform_versions .container .platform_app .app_container .platform_app_content .app_download > div:hover {
+  background: #1b1b1b;
+  color: white;
+}
+.platform_warp .platform_versions .container .platform_app .app_container .platform_app_content .app_download > div .Android_QRcode {
+  width: 200px;
+  height: 200px;
+  margin-top: 2px;
+  text-indent: -9999px;
+  display: none;
+}
+.platform_warp .platform_versions .container .platform_app .app_container .platform_app_content .app_download > div .iOS_QRcode {
+  width: 200px;
+  height: 200px;
+  margin-top: 2px;
+  text-indent: -9999px;
+  display: none;
+}
+.platform_warp .platform_versions .container .platform_app .app_container .platform_app_content .app_download .app_Android:hover .Android_QRcode {
+  display: block;
+  background-size: cover;
+}
+.platform_warp .platform_versions .container .platform_app .app_container .platform_app_content .app_download .app_iOS:hover .iOS_QRcode {
+  display: block;
+  background-size: cover;
+}
+.platform_warp .footer {
+  width: 100%;
+  background-color: #1b1b1b;
+}
+.platform_warp .footer .container .footer_main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding-top: 50px;
+  margin-bottom: 30px;
+}
+.platform_warp .footer .container .footer_main > div {
+  font-size: 14px;
+  line-height: 24px;
+}
+.platform_warp .footer .container .footer_main > div > a {
+  color: #eeeeee;
+  white-space: nowrap;
+}
+.platform_warp .footer .container .footer_main > div > a:first-child {
+  color: white;
+}
+.platform_warp .footer .container .footer_main > div > a:hover {
+  color: #ffe6b5;
+}
+.platform_warp .footer .container .footer_main > div > p {
+  color: #eeeeee;
+}
+.platform_warp .footer .container .footer_main .footer_logo > a {
+  width: 87px;
+  height: 25px;
+  background: url("../images/logo/home_logo.png") no-repeat;
+  text-indent: -9999px;
+}
+.platform_warp .footer .container .footer_main .footer_risk {
+  width: 550px;
+}
+.platform_warp .footer .container .footer_main .footer_help {
+  width: 56px;
+  height: 134px;
+}
+.platform_warp .footer .container .footer_main .footer_account {
+  width: 57px;
+  height: 86px;
+}
+.platform_warp .footer .container .footer_main .footer_about_us {
+  width: 56px;
+  height: 110px;
+}
+.platform_warp .footer .container .footer_policy {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  font-size: 14px;
+  line-height: 24px;
+}
+.platform_warp .footer .container .footer_policy > h3 {
+  color: white;
+}
+.platform_warp .footer .container .footer_policy > p {
+  color: #eeeeee;
+}
+.platform_warp .footer .footer_line {
+  width: 100%;
+  height: 1px;
+  background-color: #ffe6b5;
+}
+.platform_warp .footer .footer_address {
+  font-style: normal;
+  color: white;
+  background-color: black;
+}
+.platform_warp .footer .footer_address p {
+  text-align: center;
+  height: 74px;
+  line-height: 74px;
+}
