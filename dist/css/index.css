@@ -121,6 +121,7 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  margin-left: 50px;
 }
 .home_warp .home_header .nav_bar .container .nav > .nav_login_register > a {
   display: block;
@@ -154,6 +155,10 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -162,7 +167,7 @@ body {
           align-items: center;
 }
 .home_warp .home_header .home_banner .container .banner_content {
-  width: 1200px;
+  width: 100%;
   height: 366px;
   background: rgba(0, 51, 102, 0.8);
   text-align: center;
@@ -188,6 +193,13 @@ body {
   color: white;
   padding-left: 40px;
   padding-right: 40px;
+}
+.home_warp .home_header .home_banner .container .banner_line {
+  width: 100%;
+  height: 10px;
+  background: #003366;
+  opacity: 0.8;
+  margin-top: 10px;
 }
 .home_warp .home_feature {
   width: 100%;
@@ -363,7 +375,7 @@ body {
 .home_warp .home_global .container .global_haste .haste_content .content_detail > p {
   margin-top: 10px;
   font-size: 14px;
-  color: #585858;
+  color: #505050;
   line-height: 24px;
 }
 .home_warp .home_global .container .global_haste:first-child {
@@ -428,7 +440,7 @@ body {
 }
 .home_warp .home_deal .container .deal_flex .flex_item .item_img {
   width: 108px;
-  height: 106px;
+  height: 113px;
   background: url("../images/icon/icon_easy.png") no-repeat;
 }
 .home_warp .home_deal .container .deal_flex .flex_item .item_content {
@@ -448,10 +460,10 @@ body {
   line-height: 24px;
 }
 .home_warp .home_deal .container .deal_flex .flex_item:nth-child(2) .item_img {
-  background: url("../images/icon/icon_infinite.png") no-repeat;
+  background: url("../images/icon/icon_time.png") no-repeat;
 }
 .home_warp .home_deal .container .deal_flex .flex_item:nth-child(3) .item_img {
-  background: url("../images/icon/icon_time.png") no-repeat;
+  background: url("../images/icon/icon_infinite.png") no-repeat;
 }
 .home_warp .home_numberdata {
   width: 100%;
@@ -475,7 +487,6 @@ body {
   color: #83B4E5;
   font-size: 72px;
   display: block;
-  font-weight: bold;
   text-align: center;
 }
 .home_warp .home_numberdata .container .numberdata_item > p {
@@ -487,233 +498,159 @@ body {
   width: 100%;
   background-color: #F0F2F7;
 }
-.home_warp .home_variety .container {
+.home_warp .home_variety .container .variety_tab {
+  height: 930px;
+  padding-top: 150px;
+  padding-bottom: 150px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  /*.variety_item {
-        height: 544px;
-        //border: 1px solid green;
-        margin-top: 150px;
-        margin-bottom: 150px;
-        color: white;
-        display: flex;
-        flex-flow: column nowrap;
-        justify-content: space-between;
-      }*/
-  /*.left_column {
-        width: 326px;
-        //border: 1px solid #000;
-        .variety_forex_container {
-          width: 326px;
-          height: 245px;
-          background: url("../images/img/img_trade_forex.png") no-repeat;
-          //border: 1px solid #000;
-          > h3 {
-            display: block;
-            margin-left: auto;
-            margin-right: auto;
-            text-align: center;
-            line-height: 245px;
-            font-size: 24px;
-            font-weight: bold;
-          }
-          .variety_forex_content {
-            display: none;
-          }
-          .variety_forex_more {
-            display: none;
-          }
-          &:hover {
-            > h3 {
-              display: none;
-              //transform: translate(-105px, -85px);
-              //animation: rainbow 100s;
-            }
-            .variety_forex_content {
-              display: block;
-              padding-top: 20px;
-              margin-left: 28px;
-              margin-right: 28px;
-              > h3 {
-                //display: none;
-                font-size: 24px;
-                font-weight: bold;
-                margin-bottom: 10px;
-
-              }
-              > p {
-                font-size: 14px;
-                line-height: 24px;
-              }
-            }
-            .variety_forex_more {
-              display: block;
-              width: 158px;
-              //height: 44px;
-              border: 1px solid white;
-              border-radius: 22px;
-              margin-top: 22px;
-              //margin-bottom: 30px;
-              margin-left: 28px;
-              text-align: center;
-              line-height: 44px;
-              cursor: pointer;
-              color: #ffffff;
-              &:hover {
-                background-color: #1b1b1b;
-                border: 1px solid #1b1b1b;
-                color: #ffe6b5;
-              }
-            }
-          }
-          &:nth-child(2) {
-            background: url("../images/img/img_trade_oil.png") no-repeat;
-          }
-        }
-        .item_left_content {
-          width: 270px;
-          height: 126px;
-          border: 1px solid red;
-        }
-      }*/
-  /*.middle_column {
-        width: 326px;
-        display: flex;
-        flex-flow: column nowrap;
-        justify-content: space-between;
-        //border: 1px solid #000;
-        .variety_metal_container {
-          width: 326px;
-          height: 245px;
-          background: url("../images/img/img_trade_gold.png") no-repeat;
-          //border: 1px solid #000;
-          > h3 {
-            display: block;
-            margin-left: auto;
-            margin-right: auto;
-            text-align: center;
-            line-height: 245px;
-            font-size: 24px;
-            font-weight: bold;
-          }
-          .variety_metal_content {
-            display: none;
-          }
-          .variety_metal_more {
-            display: none;
-          }
-          &:hover {
-            > h3 {
-              display: none;
-              //transform: translate(-105px, -85px);
-              //animation: rainbow 100s;
-            }
-            .variety_metal_content {
-              display: block;
-              padding-top: 20px;
-              margin-left: 28px;
-              margin-right: 28px;
-              > h3 {
-                //display: none;
-                font-size: 24px;
-                font-weight: bold;
-                margin-bottom: 10px;
-
-              }
-              > p {
-                font-size: 14px;
-                line-height: 24px;
-              }
-            }
-            .variety_metal_more {
-              display: block;
-              width: 158px;
-              //height: 44px;
-              border: 1px solid white;
-              border-radius: 22px;
-              margin-top: 22px;
-              //margin-bottom: 30px;
-              margin-left: 28px;
-              text-align: center;
-              line-height: 44px;
-              cursor: pointer;
-              color: #ffffff;
-              &:hover {
-                background-color: #1b1b1b;
-                border: 1px solid #1b1b1b;
-                color: #ffe6b5;
-              }
-            }
-          }
-          &:nth-child(2) {
-            background: url("../images/img/img_trade_cfd.png") no-repeat;
-          }
-        }
-      }*/
-  /*.right_column {
-        width: 434px;
-        height: 544px;
-        background: url("../images/img/img_trade.png") no-repeat;
-        .variety_many {
-          //border: 1px solid #000;
-          margin-top: 73px;
-          margin-right: 161px;
-          margin-left: 59px;
-          > h3 {
-            font-size: 24px;
-            white-space: nowrap;
-          }
-          > p {
-            font-size: 14px;
-            line-height: 35px;
-            text-align: center;
-          }
-        }
-      }*/
+}
+.home_warp .home_variety .container .variety_tab .tab_left {
+  width: 708px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.home_warp .home_variety .container .variety_tab .tab_left .left_item {
+  width: 708px;
+  height: 210px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.home_warp .home_variety .container .variety_tab .tab_left .left_item > h3 {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  line-height: 245px;
+  font-size: 24px;
+  color: white;
+}
+.home_warp .home_variety .container .variety_tab .tab_left .left_item .item_content {
+  width: 648px;
+  height: 150px;
+  color: white;
+  position: relative;
+  display: none;
+}
+.home_warp .home_variety .container .variety_tab .tab_left .left_item .item_content > h3 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+.home_warp .home_variety .container .variety_tab .tab_left .left_item .item_content > p {
+  font-size: 14px;
+  line-height: 24px;
+}
+.home_warp .home_variety .container .variety_tab .tab_left .left_item .item_content .content_btn {
+  display: block;
+  width: 158px;
+  border: 1px solid white;
+  border-radius: 22px;
+  text-align: center;
+  line-height: 40px;
+  color: #ffffff;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+.home_warp .home_variety .container .variety_tab .tab_left .left_item .item_content .content_btn:hover {
+  background-color: #85B0DE;
+  border: 1px solid #85B0DE;
+}
+.home_warp .home_variety .container .variety_tab .tab_left .left_item:first-child {
+  background: url("../images/img/img_trade_forex.png") no-repeat;
+}
+.home_warp .home_variety .container .variety_tab .tab_left .left_item:nth-child(2) {
+  background: url("../images/img/img_trade_gold.png") no-repeat;
+}
+.home_warp .home_variety .container .variety_tab .tab_left .left_item:nth-child(3) {
+  background: url("../images/img/img_trade_oil.png") no-repeat;
+}
+.home_warp .home_variety .container .variety_tab .tab_left .left_item:nth-child(4) {
+  background: url("../images/img/img_trade_cfd.png") no-repeat;
+}
+.home_warp .home_variety .container .variety_tab .tab_left .left_item:hover > h3 {
+  display: none;
+}
+.home_warp .home_variety .container .variety_tab .tab_left .left_item:hover .item_content {
+  display: block;
+}
+.home_warp .home_variety .container .variety_tab .tab_right {
+  width: 460px;
+  height: 930px;
+  background: url("../images/img/img_trade.png") no-repeat;
+  color: white;
+}
+.home_warp .home_variety .container .variety_tab .tab_right .right_many {
+  margin-top: 135px;
+  margin-right: 161px;
+  margin-left: 59px;
+}
+.home_warp .home_variety .container .variety_tab .tab_right .right_many > h3 {
+  font-size: 24px;
+  white-space: nowrap;
+}
+.home_warp .home_variety .container .variety_tab .tab_right .right_many > p {
+  font-size: 14px;
+  line-height: 35px;
 }
 .home_warp .home_platform {
   width: 100%;
 }
-.home_warp .home_platform .container {
+.home_warp .home_platform .container .platform_mt5 {
+  height: 362px;
+  margin-top: 187px;
+  margin-bottom: 150px;
+  background: url("../images/bg/mt5.png") no-repeat;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
 }
-.home_warp .home_platform .container .platform_img {
-  width: 424px;
-  height: 212px;
-  background: url("../images/img/home_img_platform.png");
-  margin-top: 185px;
+.home_warp .home_platform .container .platform_mt5 .mt5_container {
+  margin-top: 30px;
 }
-.home_warp .home_platform .container .platform_mt5_container {
-  margin-top: 147px;
+.home_warp .home_platform .container .platform_mt5 .mt5_container .container_content {
+  width: 608px;
+  margin-top: 30px;
+  margin-right: 52px;
+}
+.home_warp .home_platform .container .platform_mt5 .mt5_container .container_content .platform_mt5_content {
   width: 598px;
+  margin-top: 29px;
 }
-.home_warp .home_platform .container .platform_mt5_container .platform_mt5_content {
-  width: 598px;
-  height: 175px;
-}
-.home_warp .home_platform .container .platform_mt5_container .platform_mt5_content > h3 {
+.home_warp .home_platform .container .platform_mt5 .mt5_container .container_content .platform_mt5_content > h3 {
   font-size: 24px;
-  color: #1b1b1b;
-  font-weight: bold;
+  color: #003366;
   margin-bottom: 10px;
 }
-.home_warp .home_platform .container .platform_mt5_container .platform_mt5_content > p {
+.home_warp .home_platform .container .platform_mt5 .mt5_container .container_content .platform_mt5_content > p {
   font-size: 14px;
   color: #585858;
   line-height: 24px;
 }
-.home_warp .home_platform .container .platform_mt5_container .platform_app {
-  height: 245px;
-  margin-top: 41px;
+.home_warp .home_platform .container .platform_mt5 .mt5_container .container_content .platform_app {
+  margin-top: 30px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -721,11 +658,10 @@ body {
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
-.home_warp .home_platform .container .platform_mt5_container .platform_app .app_download {
+.home_warp .home_platform .container .platform_mt5 .mt5_container .container_content .platform_app .app_download {
   width: 180px;
-  margin-bottom: 5px;
 }
-.home_warp .home_platform .container .platform_mt5_container .platform_app .app_download .download_item {
+.home_warp .home_platform .container .platform_mt5 .mt5_container .container_content .platform_app .app_download .download_item {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -735,7 +671,7 @@ body {
   border-radius: 25px;
   cursor: pointer;
 }
-.home_warp .home_platform .container .platform_mt5_container .platform_app .app_download .download_item .btn_container {
+.home_warp .home_platform .container .platform_mt5 .mt5_container .container_content .platform_app .app_download .download_item .btn_container {
   width: 100px;
   height: 50px;
   display: -webkit-box;
@@ -748,149 +684,224 @@ body {
       -ms-flex-align: center;
           align-items: center;
 }
-.home_warp .home_platform .container .platform_mt5_container .platform_app .app_download .download_item .btn_container .item_icon {
+.home_warp .home_platform .container .platform_mt5 .mt5_container .container_content .platform_app .app_download .download_item .btn_container .item_icon {
   width: 22px;
   height: 22px;
 }
-.home_warp .home_platform .container .platform_mt5_container .platform_app .app_download .download_item .btn_container .iOS_icon {
-  background: url("../images/icon/home_icon_iphone_sel.png") no-repeat;
+.home_warp .home_platform .container .platform_mt5 .mt5_container .container_content .platform_app .app_download .download_item .btn_container .iOS_icon {
+  background: url("../images/icon/home_icon_iphone_sel.png") no-repeat center;
 }
-.home_warp .home_platform .container .platform_mt5_container .platform_app .app_download .QRcode {
+.home_warp .home_platform .container .platform_mt5 .mt5_container .container_content .platform_app .app_download .QRcode {
   width: 180px;
-  height: 180px;
-  margin-top: 5px;
+  border: 1px solid #003366;
   display: none;
 }
-.home_warp .home_platform .container .platform_mt5_container .platform_app .app_iOS .download_item {
-  background-color: #1b1b1b;
+.home_warp .home_platform .container .platform_mt5 .mt5_container .container_content .platform_app .app_iOS .download_item {
+  border: 1px solid #003366;
+  background-color: #003366;
 }
-.home_warp .home_platform .container .platform_mt5_container .platform_app .app_iOS .download_item .btn_container > span {
-  color: #ffe6b5;
+.home_warp .home_platform .container .platform_mt5 .mt5_container .container_content .platform_app .app_iOS .download_item .btn_container > span {
+  color: #83B4E5;
 }
-.home_warp .home_platform .container .platform_mt5_container .platform_app .app_iOS:hover .QRcode {
+.home_warp .home_platform .container .platform_mt5 .mt5_container .container_content .platform_app .app_iOS:hover .QRcode {
+  margin-top: 3px;
   width: 180px;
   height: 180px;
   display: block;
   background-size: cover;
   text-indent: -9999px;
 }
-.home_warp .home_platform .container .platform_mt5_container .platform_app .app_Android {
+.home_warp .home_platform .container .platform_mt5 .mt5_container .container_content .platform_app .app_Android {
   height: 240px;
 }
-.home_warp .home_platform .container .platform_mt5_container .platform_app .app_Android .download_item {
-  border: 1px solid #1b1b1b;
+.home_warp .home_platform .container .platform_mt5 .mt5_container .container_content .platform_app .app_Android .download_item {
+  border: 1px solid #003366;
 }
-.home_warp .home_platform .container .platform_mt5_container .platform_app .app_Android .download_item .btn_container .Android_icon {
-  background: url("../images/icon/home_icon_and_nor.png") no-repeat;
+.home_warp .home_platform .container .platform_mt5 .mt5_container .container_content .platform_app .app_Android .download_item .btn_container .Android_icon {
+  background: url("../images/icon/home_icon_and_nor.png") no-repeat center;
 }
-.home_warp .home_platform .container .platform_mt5_container .platform_app .app_Android .download_item .btn_container > span {
-  color: #1b1b1b;
+.home_warp .home_platform .container .platform_mt5 .mt5_container .container_content .platform_app .app_Android .download_item .btn_container > span {
+  color: #003366;
 }
-.home_warp .home_platform .container .platform_mt5_container .platform_app .app_Android:hover .download_item {
-  background-color: #1b1b1b;
+.home_warp .home_platform .container .platform_mt5 .mt5_container .container_content .platform_app .app_Android:hover .download_item {
+  background-color: #003366;
 }
-.home_warp .home_platform .container .platform_mt5_container .platform_app .app_Android:hover .btn_container .Android_icon {
-  background: url("../images/icon/home_icon_and_sel.png") no-repeat;
+.home_warp .home_platform .container .platform_mt5 .mt5_container .container_content .platform_app .app_Android:hover .btn_container .Android_icon {
+  background: url("../images/icon/home_icon_and_nor_2.png") no-repeat;
 }
-.home_warp .home_platform .container .platform_mt5_container .platform_app .app_Android:hover .btn_container > span {
-  color: #ffe6b5;
+.home_warp .home_platform .container .platform_mt5 .mt5_container .container_content .platform_app .app_Android:hover .btn_container > span {
+  color: #83B4E5;
 }
-.home_warp .home_platform .container .platform_mt5_container .platform_app .app_Android:hover .QRcode {
+.home_warp .home_platform .container .platform_mt5 .mt5_container .container_content .platform_app .app_Android:hover .QRcode {
+  margin-top: 3px;
+  width: 180px;
+  height: 180px;
   display: block;
   background-size: cover;
   text-indent: -9999px;
 }
-.home_warp .home_platform .container .platform_mt5_container .platform_app .app_windows .download_item {
-  border: 1px solid #1b1b1b;
+.home_warp .home_platform .container .platform_mt5 .mt5_container .container_content .platform_app .app_windows .download_item {
+  border: 1px solid #003366;
 }
-.home_warp .home_platform .container .platform_mt5_container .platform_app .app_windows .download_item .btn_container .windows_icon {
+.home_warp .home_platform .container .platform_mt5 .mt5_container .container_content .platform_app .app_windows .download_item .btn_container .windows_icon {
   background: url("../images/icon/home_icon_win_nor.png") no-repeat;
 }
-.home_warp .home_platform .container .platform_mt5_container .platform_app .app_windows .download_item .btn_container > span {
-  color: #1b1b1b;
+.home_warp .home_platform .container .platform_mt5 .mt5_container .container_content .platform_app .app_windows .download_item .btn_container > span {
+  color: #003366;
 }
-.home_warp .home_platform .container .platform_mt5_container .platform_app .app_windows .download_item:hover {
-  background-color: #1b1b1b;
+.home_warp .home_platform .container .platform_mt5 .mt5_container .container_content .platform_app .app_windows .download_item:hover {
+  background-color: #003366;
 }
-.home_warp .home_platform .container .platform_mt5_container .platform_app .app_windows .download_item:hover .btn_container .windows_icon {
-  background: url("../images/icon/home_icon_win_se.png") no-repeat;
+.home_warp .home_platform .container .platform_mt5 .mt5_container .container_content .platform_app .app_windows .download_item:hover .btn_container .windows_icon {
+  background: url("../images/icon/home_icon_win_nor_2.png") no-repeat;
 }
-.home_warp .home_platform .container .platform_mt5_container .platform_app .app_windows .download_item:hover .btn_container > span {
-  color: #ffe6b5;
+.home_warp .home_platform .container .platform_mt5 .mt5_container .container_content .platform_app .app_windows .download_item:hover .btn_container > span {
+  color: #83B4E5;
 }
 .home_warp .footer {
   width: 100%;
-  background-color: #1b1b1b;
+  /*.container {
+      //border: 1px solid #000;
+      .footer_main {
+        display: flex;
+        justify-content: space-between;
+        padding-top: 50px;
+        margin-bottom: 30px;
+        > div {
+          font-size: 14px;
+          line-height: 24px;
+          > a {
+            color: #eeeeee;
+            white-space: nowrap;
+            &:first-child {
+              color: white;
+            }
+            &:hover {
+              color: #ffe6b5;
+            }
+          }
+          > p {
+            color: #eeeeee;
+          }
+        }
+        .footer_logo {
+          > a {
+            width: 87px;
+            height: 25px;
+            //border: 1px solid pink;
+            background: url("../images/logo/home_logo.png") no-repeat;
+            text-indent: -9999px;
+          }
+        }
+        .footer_risk {
+          width: 550px;
+          //height: 135px;
+        }
+        .footer_help {
+          width: 56px;
+          height: 134px;
+        }
+        .footer_account {
+          width: 57px;
+          height: 86px;
+        }
+        .footer_about_us {
+          width: 56px;
+          height: 110px;
+        }
+      }
+      .footer_policy {
+        //border: 1px solid white;
+        margin-top: 30px;
+        margin-bottom: 30px;
+        font-size: 14px;
+        line-height: 24px;
+        > h3 {
+          color: white;
+        }
+        > p {
+          color: #eeeeee;
+        }
+      }
+    }*/
+  /*.footer_line {
+      width: 100%;
+      height: 1px;
+      background-color: #ffe6b5;
+    }*/
 }
-.home_warp .footer .container .footer_main {
+.home_warp .footer .footer_main {
+  background: url("../images/bg/bg_di.png") no-repeat;
+}
+.home_warp .footer .footer_main .container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  padding-top: 50px;
-  margin-bottom: 30px;
+  padding-top: 30px;
+  padding-bottom: 30px;
 }
-.home_warp .footer .container .footer_main > div {
+.home_warp .footer .footer_main .container > div {
   font-size: 14px;
   line-height: 24px;
 }
-.home_warp .footer .container .footer_main > div > a {
+.home_warp .footer .footer_main .container > div > a {
   color: #eeeeee;
   white-space: nowrap;
 }
-.home_warp .footer .container .footer_main > div > a:first-child {
+.home_warp .footer .footer_main .container > div > a:first-child {
   color: white;
 }
-.home_warp .footer .container .footer_main > div > a:hover {
-  color: #ffe6b5;
+.home_warp .footer .footer_main .container > div > a:hover {
+  color: #85B0DE;
 }
-.home_warp .footer .container .footer_main > div > p {
+.home_warp .footer .footer_main .container > div > p {
   color: #eeeeee;
 }
-.home_warp .footer .container .footer_main .footer_logo > a {
-  width: 87px;
-  height: 25px;
+.home_warp .footer .footer_main .container .footer_logo > a {
+  width: 55px;
+  height: 39px;
   background: url("../images/logo/home_logo.png") no-repeat;
   text-indent: -9999px;
 }
-.home_warp .footer .container .footer_main .footer_risk {
+.home_warp .footer .footer_main .container .footer_risk {
   width: 550px;
 }
-.home_warp .footer .container .footer_main .footer_help {
+.home_warp .footer .footer_main .container .footer_help {
   width: 56px;
   height: 134px;
 }
-.home_warp .footer .container .footer_main .footer_account {
+.home_warp .footer .footer_main .container .footer_account {
   width: 57px;
   height: 86px;
 }
-.home_warp .footer .container .footer_main .footer_about_us {
+.home_warp .footer .footer_main .container .footer_about_us {
   width: 56px;
   height: 110px;
 }
-.home_warp .footer .container .footer_policy {
-  margin-top: 30px;
-  margin-bottom: 30px;
+.home_warp .footer .footer_main .footer_line {
+  width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  height: 1px;
+  background-color: white;
+}
+.home_warp .footer .footer_main .footer_policy {
   font-size: 14px;
   line-height: 24px;
 }
-.home_warp .footer .container .footer_policy > h3 {
+.home_warp .footer .footer_main .footer_policy > h3 {
   color: white;
 }
-.home_warp .footer .container .footer_policy > p {
+.home_warp .footer .footer_main .footer_policy > p {
   color: #eeeeee;
-}
-.home_warp .footer .footer_line {
-  width: 100%;
-  height: 1px;
-  background-color: #ffe6b5;
 }
 .home_warp .footer .footer_address {
   font-style: normal;
   color: white;
-  background-color: black;
+  background-color: #003366;
 }
 .home_warp .footer .footer_address p {
   text-align: center;

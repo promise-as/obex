@@ -37,21 +37,24 @@
     .nav_bar {
       width: 100%;
       height: 60px;
-      background-color: #000000;
+      //background-color: #003366;
+      background: rgba(0, 51, 102, 0.8);
+      //opacity: 0.8;
       position: fixed;
       top: 0;
       //left: 0;
       z-index: 200;
-      box-shadow: 0 2px 2px rgba(0, 0, 0, .2);
+      //box-shadow: 0 2px 2px rgba(0,0,0,.2);
+      //border: 1px solid #000;
       .container {
         display: flex;
         justify-content: space-between;
         .logo {
           > a {
-            width: 118px;
-            height: 24px;
-            //border: 1px solid pink;
-            margin-top: 18px;
+            width: 55px;
+            height: 40px;
+            //border: 1px solid red;
+            margin-top: 10px;
             background: url("../images/logo/home_logo.png") no-repeat;
             text-indent: -9999px;
           }
@@ -59,46 +62,88 @@
         .nav {
           //border: 1px solid red;
           display: flex;
-          li {
+          > a {
+            //display: block;
             height: 60px;
             padding: 0 35px;
             //border: 1px solid blue;
             display: flex;
             justify-content: center;
             align-items: center;
-            a {
+            > li {
               //border: 1px solid blue;
+              //height: 60px;
               > span {
                 color: white;
                 display: block;
+                //padding: 0 35px;
+                //line-height: 60px;
                 //border: 1px solid red;
-                &.active {
-                  color: #ffe6b5;
-                }
               }
               > em {
                 display: none;
+                //width: 30px;
+                //width: 100%;
                 height: 1px;
+                //border-radius: 50%;
                 background-color: white;
                 position: relative;
                 top: 6px;
                 left: 0;
                 right: 0;
                 margin: auto;
-                &.active {
-                  display: block;
-                  background-color: #ffe6b5;
-                }
               }
-              &:hover {
-                > span {
-                  color: #ffe6b5;
-                }
+            }
+            &:hover {
+              li {
                 > em {
                   display: block;
-                  background-color: #ffe6b5;
                 }
               }
+              background-color: #85B0DE;
+            }
+            &.active {
+              li {
+                > em {
+                  display: block;
+                }
+              }
+              background-color: #85B0DE;
+            }
+          }
+          > .nav_login_register {
+            width: 100px;
+            //border: 1px solid green;
+            //display: none;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-left: 50px;
+            > a {
+              //width: 50px;
+              //border: 1px solid blue;
+              display: block;
+              font-size: 16px;
+              color: white;
+              text-align: center;
+              //margin-top: 21px;
+              &:hover {
+                color: #85B0DE;
+              }
+              padding-left: 5px;
+              padding-right: 5px;
+            }
+            .login {
+              float: left;
+            }
+            .login_right_line {
+              width: 1px;
+              height: 15px;
+              margin-top: 1px;
+              background-color: white;
+            }
+            .register {
+              float: right;
             }
           }
         }
@@ -107,7 +152,7 @@
     /*banner*/
     .help_banner {
       width: 100%;
-      margin-top: 60px;
+      //margin-top: 60px;
       .container {
         //border: 1px solid #ffffff;
         height: 418px;
@@ -134,29 +179,31 @@
         justify-content: space-between;
         align-items: center;
         .tab_header {
-          width: 1040px;
+          width: 960px;
           display: flex;
           justify-content: space-between;
           margin-top: 80px;
           margin-bottom: 50px;
           //border: 1px solid green;
           .header_item {
-            width: 158px;
-            height: 44px;
+            //width: 158px;
+            //height: 44px;
             //border: 1px solid #000;
-            border-radius: 22px;
+            //border-radius: 22px;
             text-align: center;
-            line-height: 44px;
+            line-height: 24px;
             cursor: pointer;
-            color: #1b1b1b;
+            color: #83B4E5;
             &:hover {
-              background-color: #1b1b1b;
-              color: #ffe6b5;
+              //background-color: #1b1b1b;
+              color: #003366;
+              border-bottom: 1px solid #003366;
             }
           }
           .active {
-            background-color: #1b1b1b;
-            color: #ffe6b5;
+            //background-color: #003366;
+            color: #003366;
+            border-bottom: 1px solid #003366;
           }
         }
         .tab_body {
@@ -167,7 +214,7 @@
             align-items: center;
             margin-bottom: 60px;
             border-radius: 8px;
-            background-color: #eeeeee;
+            background-color: #F0F2F7;
             .item_vessel {
               //height: 205px;
               //border: 1px solid red;
@@ -175,9 +222,10 @@
               justify-content: space-between;
               padding: 50px 102px 50px 40px;
               .vessel_left {
-                width: 20px;
-                height: 4px;
-                background-color: #1b1b1b;
+                width:10px;
+                height:10px;
+                background-color: #003366;
+                border-radius:50%;
                 margin-right: 60px;
               }
               .vessel_right {
@@ -187,7 +235,7 @@
                 flex: 1;
                 > h3 {
                   font-size: 24px;
-                  color: #1b1b1b;
+                  color: #003366;
                   line-height: 40px;
                   font-weight: bold;
                 }
@@ -205,42 +253,25 @@
                 }
                 > a {
                   font-size: 14px;
-                  color: #1b1b1b;
+                  color: #003366;
                   margin-top: 28px;
                 }
               }
             }
-            &.checked {
-              background-color: #0E48B4;
-              .vessel_left {
-                background-color: #F2F1EF;
-              }
-              .vessel_right {
-                > h3 {
-                  color: white;
-                }
-                .right_text {
-                  color: #585858;
-                }
-                > a {
-                  color: white;
-                }
-              }
-            }
             &:hover {
-              background-color: #1b1b1b;
+              background-color: #003366;
               .vessel_left {
-                background-color: #ffe6b5;
+                background-color: #85B0DE;
               }
               .vessel_right {
                 > h3 {
-                  color: #ffe6b5;
+                  color: #85B0DE;
                 }
                 > .right_text {
                   color: white;
                 }
                 > a {
-                  color: #ffe6b5;
+                  color: #85B0DE;
                 }
               }
             }
@@ -256,8 +287,91 @@
   /*底部*/
   .footer {
     width: 100%;
-    background-color: #1b1b1b;
-    .container {
+    //background-color: #1b1b1b;
+    .footer_main {
+      //height: 338px;
+      background: url("../images/bg/bg_di.png") no-repeat;
+      .container {
+        display: flex;
+        justify-content: space-between;
+        padding-top: 30px;
+        padding-bottom: 30px;
+        > div {
+          font-size: 14px;
+          line-height: 24px;
+          > a {
+            color: #eeeeee;
+            white-space: nowrap;
+            &:first-child {
+              color: white;
+            }
+            &:hover {
+              color: #85B0DE;
+            }
+          }
+          > p {
+            color: #eeeeee;
+          }
+        }
+        .footer_logo {
+          > a {
+            width: 55px;
+            height: 39px;
+            //border: 1px solid red;
+            background: url("../images/logo/home_logo.png") no-repeat;
+            text-indent: -9999px;
+          }
+        }
+        .footer_risk {
+          width: 550px;
+          //height: 135px;
+        }
+        .footer_help {
+          width: 56px;
+          height: 134px;
+        }
+        .footer_account {
+          width: 57px;
+          height: 86px;
+        }
+        .footer_about_us {
+          width: 56px;
+          height: 110px;
+        }
+
+      }
+      .footer_line {
+        width: 1200px;
+        margin-left: auto;
+        margin-right: auto;
+        height: 1px;
+        background-color: white;
+      }
+      .footer_policy {
+        //border: 1px solid red;
+        font-size: 14px;
+        line-height: 24px;
+        > h3 {
+          color: white;
+        }
+        > p {
+          color: #eeeeee;
+        }
+      }
+    }
+
+    .footer_address {
+      font-style: normal;
+      color: white;
+      background-color: #003366;
+      p {
+        text-align: center;
+        height: 74px;
+        line-height: 74px;
+      }
+    }
+
+    /*.container {
       //border: 1px solid #000;
       .footer_main {
         display: flex;
@@ -292,6 +406,7 @@
         }
         .footer_risk {
           width: 550px;
+          //height: 135px;
         }
         .footer_help {
           width: 56px;
@@ -319,21 +434,11 @@
           color: #eeeeee;
         }
       }
-    }
-    .footer_line {
+    }*/
+    /*.footer_line {
       width: 100%;
       height: 1px;
       background-color: #ffe6b5;
-    }
-    .footer_address {
-      font-style: normal;
-      color: white;
-      background-color: black;
-      p {
-        text-align: center;
-        height: 74px;
-        line-height: 74px;
-      }
-    }
+    }*/
   }
 }

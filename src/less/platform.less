@@ -36,21 +36,24 @@
     .nav_bar {
       width: 100%;
       height: 60px;
-      background-color: #000000;
+      //background-color: #003366;
+      background: rgba(0, 51, 102, 0.8);
+      //opacity: 0.8;
       position: fixed;
       top: 0;
       //left: 0;
       z-index: 200;
-      box-shadow: 0 2px 2px rgba(0, 0, 0, .2);
+      //box-shadow: 0 2px 2px rgba(0,0,0,.2);
+      //border: 1px solid #000;
       .container {
         display: flex;
         justify-content: space-between;
         .logo {
           > a {
-            width: 118px;
-            height: 24px;
-            //border: 1px solid pink;
-            margin-top: 18px;
+            width: 55px;
+            height: 40px;
+            //border: 1px solid red;
+            margin-top: 10px;
             background: url("../images/logo/home_logo.png") no-repeat;
             text-indent: -9999px;
           }
@@ -58,46 +61,88 @@
         .nav {
           //border: 1px solid red;
           display: flex;
-          li {
+          > a {
+            //display: block;
             height: 60px;
             padding: 0 35px;
             //border: 1px solid blue;
             display: flex;
             justify-content: center;
             align-items: center;
-            a {
+            > li {
               //border: 1px solid blue;
+              //height: 60px;
               > span {
                 color: white;
                 display: block;
+                //padding: 0 35px;
+                //line-height: 60px;
                 //border: 1px solid red;
-                &.active {
-                  color: #ffe6b5;
-                }
               }
               > em {
                 display: none;
+                //width: 30px;
+                //width: 100%;
                 height: 1px;
+                //border-radius: 50%;
                 background-color: white;
                 position: relative;
                 top: 6px;
                 left: 0;
                 right: 0;
                 margin: auto;
-                &.active {
-                  display: block;
-                  background-color: #ffe6b5;
-                }
               }
-              &:hover {
-                > span {
-                  color: #ffe6b5;
-                }
+            }
+            &:hover {
+              li {
                 > em {
                   display: block;
-                  background-color: #ffe6b5;
                 }
               }
+              background-color: #85B0DE;
+            }
+            &.active {
+              li {
+                > em {
+                  display: block;
+                }
+              }
+              background-color: #85B0DE;
+            }
+          }
+          > .nav_login_register {
+            width: 100px;
+            //border: 1px solid green;
+            //display: none;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-left: 50px;
+            > a {
+              //width: 50px;
+              //border: 1px solid blue;
+              display: block;
+              font-size: 16px;
+              color: white;
+              text-align: center;
+              //margin-top: 21px;
+              &:hover {
+                color: #85B0DE;
+              }
+              padding-left: 5px;
+              padding-right: 5px;
+            }
+            .login {
+              float: left;
+            }
+            .login_right_line {
+              width: 1px;
+              height: 15px;
+              margin-top: 1px;
+              background-color: white;
+            }
+            .register {
+              float: right;
             }
           }
         }
@@ -106,23 +151,46 @@
     /*banner*/
     .platform_banner {
       width: 100%;
-      background: url("../images/bg/bg_risk.png") #0E48B4 no-repeat;
-      margin-top: 60px;
+      background: url("../images/bg/bg_2.png") no-repeat;
+      //margin-top: 60px;
       .container {
-        //border: 1px solid #ffffff;
-        height: 420px;
+        //border: 1px solid red;
+        height: 480px;
         display: flex;
         flex-flow: column nowrap;
         justify-content: center;
         align-items: center;
-        color: #ffe6b5;
-        .banner_h2 {
-          font-size: 72px;
-          font-weight: bold;
+        padding-top: 30px;
+        .banner_content {
+          width: 100%;
+          height: 219px;
+          //border: 1px solid green;
+          background: rgba(0, 51, 102, 0.8);
+          text-align: center;
+          display: flex;
+          flex-flow: column nowrap;
+          justify-content: center;
+          //align-items: center;
+          .banner_h2 {
+            font-size: 72px;
+            //font-weight: bold;
+            margin-bottom: 20px;
+            color: #83B4E5;
+          }
+          > p {
+            font-size: 24px;
+            line-height: 40px;
+            padding-left: 40px;
+            padding-right: 40px;
+            color: #83B4E5;
+          }
         }
-        > p {
-          font-size: 24px;
-          margin-top: 30px;
+        .banner_line {
+          width: 100%;
+          height: 10px;
+          background: rgba(0, 51, 102, 1);
+          opacity: 0.8;
+          margin-top: 10px;
         }
       }
     }
@@ -131,36 +199,38 @@
   .platform_versions {
     .container {
       //border: 1px solid #cccccc;
+      display: flex;
+      justify-content: space-between;
+      margin-top: 120px; // banner有个padding-top: 30px
+      //margin-bottom: 150px;
       .platform_pc {
         //border: 1px solid red;
         .pc_container {
           //border: 1px solid pink;
           display: flex;
+          flex-flow: column nowrap;
           justify-content: space-between;
-          margin-top: 150px;
           box-shadow: 0px 3px 26px 2px rgba(14, 72, 180, 0.08);
           border-radius: 10px;
           .platform_pc_img {
-            width: 600px;
-            height: 464px;
+            width: 560px;
+            height: 466px;
             background: url("../images/img/trade_img_pc.png") no-repeat;
           }
           .platform_pc_content {
-            width: 460px;
-            height: 350px;
+            width: 440px;
+            //height: 350px;
             //border: 1px solid #000;
-            padding-top: 52px;
-            padding-right: 52px;
-            //border: 1px solid #000;
+            padding: 58px 60px 0 60px;
             .pc_content_detail {
               > h3 {
-                color: #1b1b1b;
+                color: #003366;
                 font-size: 24px;
                 font-weight: bold;
-                margin-bottom: 10px;
+                margin-bottom: 12px;
               }
               > p {
-                color: #505050;
+                color: #585858;
                 font-size: 14px;
                 line-height: 24px;
               }
@@ -168,48 +238,48 @@
             .pc_versions_download {
               width: 200px;
               height: 70px;
-              border: 1px solid #1b1b1b;
+              border: 1px solid #003366;
               border-radius: 35px;
-              margin-top: 52px;
-              color: #1b1b1b;
+              margin-top: 60px;
+              color: #003366;
               text-align: center;
               line-height: 70px;
               cursor: pointer;
+              margin-bottom: 60px;
               &:hover {
-                background: #1b1b1b;
-                color: white;
+                background: #003366;
+                color: #85B0DE;
               }
             }
           }
         }
 
       }
+
       .platform_app {
-        //border: 1px solid red;
+        //border: 1px solid green;
         .app_container {
           display: flex;
+          flex-flow: column nowrap;
           justify-content: space-between;
           //border: 1px solid deeppink;
-          margin-top: 130px;
           box-shadow: 0px 3px 26px 2px rgba(14, 72, 180, 0.08);
           border-radius: 10px;
           margin-bottom: 150px;
           //margin-bottom: 166px; // 有二维码的时候
           .platform_app_img {
             //border: 1px solid #000;
-            width: 600px;
-            height: 377px;
+            width: 560px;
+            height: 466px;
             background: url("../images/img/trade_img_app.png") no-repeat;
           }
           .platform_app_content {
-            width: 460px;
+            width: 440px;
             //border: 1px solid #000;
-            padding-top: 52px;
-            padding-right: 52px;
-            //border: 1px solid #000;
+            padding: 58px 60px 0 60px;
             .app_content_detail {
               > h3 {
-                color: #1b1b1b;
+                color: #003366;
                 font-size: 24px;
                 font-weight: bold;
                 margin-bottom: 10px;
@@ -238,11 +308,9 @@
           }
           .platform_app_content {
             //border: 1px solid #000;
-            padding-left: 52px;
-            padding-right: 85px;
             .app_content_detail {
               > h3 {
-                color: #1b1b1b;
+                color: #003366;
                 font-weight: bold;
                 font-size: 24px;
                 margin-bottom: 10px;
@@ -257,33 +325,34 @@
               //border: 1px solid #000;
               display: flex;
               justify-content: space-between;
+              margin-top: 140px;
               > div {
                 width: 200px;
                 height: 70px;
-                border: 1px solid #1b1b1b;
+                border: 1px solid #003366;
                 border-radius: 35px;
-                margin-top: 34px;
-                color: #1b1b1b;
+                color: #003366;
                 text-align: center;
                 line-height: 70px;
                 cursor: pointer;
+                margin-bottom: 60px;
                 &:hover {
-                  background: #1b1b1b;
-                  color: white;
+                  background: #003366;
+                  color: #85B0DE;
                 }
                 .Android_QRcode {
                   width: 200px;
                   height: 200px;
-                  //border: 1px solid #1b1b1b;
-                  margin-top: 2px;
+                  border: 1px solid #003366;
+                  margin-top: 4px;
                   text-indent: -9999px;
                   display: none;
                 }
                 .iOS_QRcode {
                   width: 200px;
                   height: 200px;
-                  //border: 1px solid #1b1b1b;
-                  margin-top: 2px;
+                  border: 1px solid #003366;
+                  margin-top: 4px;
                   text-indent: -9999px;
                   display: none;
                 }
@@ -316,8 +385,91 @@
   /*底部*/
   .footer {
     width: 100%;
-    background-color: #1b1b1b;
-    .container {
+    //background-color: #1b1b1b;
+    .footer_main {
+      //height: 338px;
+      background: url("../images/bg/bg_di.png") no-repeat;
+      .container {
+        display: flex;
+        justify-content: space-between;
+        padding-top: 30px;
+        padding-bottom: 30px;
+        > div {
+          font-size: 14px;
+          line-height: 24px;
+          > a {
+            color: #eeeeee;
+            white-space: nowrap;
+            &:first-child {
+              color: white;
+            }
+            &:hover {
+              color: #85B0DE;
+            }
+          }
+          > p {
+            color: #eeeeee;
+          }
+        }
+        .footer_logo {
+          > a {
+            width: 55px;
+            height: 39px;
+            //border: 1px solid red;
+            background: url("../images/logo/home_logo.png") no-repeat;
+            text-indent: -9999px;
+          }
+        }
+        .footer_risk {
+          width: 550px;
+          //height: 135px;
+        }
+        .footer_help {
+          width: 56px;
+          height: 134px;
+        }
+        .footer_account {
+          width: 57px;
+          height: 86px;
+        }
+        .footer_about_us {
+          width: 56px;
+          height: 110px;
+        }
+
+      }
+      .footer_line {
+        width: 1200px;
+        margin-left: auto;
+        margin-right: auto;
+        height: 1px;
+        background-color: white;
+      }
+      .footer_policy {
+        //border: 1px solid red;
+        font-size: 14px;
+        line-height: 24px;
+        > h3 {
+          color: white;
+        }
+        > p {
+          color: #eeeeee;
+        }
+      }
+    }
+
+    .footer_address {
+      font-style: normal;
+      color: white;
+      background-color: #003366;
+      p {
+        text-align: center;
+        height: 74px;
+        line-height: 74px;
+      }
+    }
+
+    /*.container {
       //border: 1px solid #000;
       .footer_main {
         display: flex;
@@ -352,6 +504,7 @@
         }
         .footer_risk {
           width: 550px;
+          //height: 135px;
         }
         .footer_help {
           width: 56px;
@@ -379,21 +532,11 @@
           color: #eeeeee;
         }
       }
-    }
-    .footer_line {
+    }*/
+    /*.footer_line {
       width: 100%;
       height: 1px;
       background-color: #ffe6b5;
-    }
-    .footer_address {
-      font-style: normal;
-      color: white;
-      background-color: black;
-      p {
-        text-align: center;
-        height: 74px;
-        line-height: 74px;
-      }
-    }
+    }*/
   }
 }

@@ -27,6 +27,7 @@
 .about_warp {
   /*头部*/
   /*主体*/
+  /*服务*/
   /*我们的优势*/
   /*注册*/
   /*底部*/
@@ -39,12 +40,10 @@
 .about_warp .about_header .nav_bar {
   width: 100%;
   height: 60px;
-  background-color: #000000;
+  background: rgba(0, 51, 102, 0.8);
   position: fixed;
   top: 0;
   z-index: 200;
-  -webkit-box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
-          box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
 }
 .about_warp .about_header .nav_bar .container {
   display: -webkit-box;
@@ -55,9 +54,9 @@
           justify-content: space-between;
 }
 .about_warp .about_header .nav_bar .container .logo > a {
-  width: 118px;
-  height: 24px;
-  margin-top: 18px;
+  width: 55px;
+  height: 40px;
+  margin-top: 10px;
   background: url("../images/logo/home_logo.png") no-repeat;
   text-indent: -9999px;
 }
@@ -66,7 +65,7 @@
   display: -ms-flexbox;
   display: flex;
 }
-.about_warp .about_header .nav_bar .container .nav li {
+.about_warp .about_header .nav_bar .container .nav > a {
   height: 60px;
   padding: 0 35px;
   display: -webkit-box;
@@ -79,14 +78,11 @@
       -ms-flex-align: center;
           align-items: center;
 }
-.about_warp .about_header .nav_bar .container .nav li a > span {
+.about_warp .about_header .nav_bar .container .nav > a > li > span {
   color: white;
   display: block;
 }
-.about_warp .about_header .nav_bar .container .nav li a > span.active {
-  color: #ffe6b5;
-}
-.about_warp .about_header .nav_bar .container .nav li a > em {
+.about_warp .about_header .nav_bar .container .nav > a > li > em {
   display: none;
   height: 1px;
   background-color: white;
@@ -96,16 +92,53 @@
   right: 0;
   margin: auto;
 }
-.about_warp .about_header .nav_bar .container .nav li a > em.active {
-  display: block;
-  background-color: #ffe6b5;
+.about_warp .about_header .nav_bar .container .nav > a:hover {
+  background-color: #85B0DE;
 }
-.about_warp .about_header .nav_bar .container .nav li a:hover > span {
-  color: #ffe6b5;
-}
-.about_warp .about_header .nav_bar .container .nav li a:hover > em {
+.about_warp .about_header .nav_bar .container .nav > a:hover li > em {
   display: block;
-  background-color: #ffe6b5;
+}
+.about_warp .about_header .nav_bar .container .nav > a.active {
+  background-color: #85B0DE;
+}
+.about_warp .about_header .nav_bar .container .nav > a.active li > em {
+  display: block;
+}
+.about_warp .about_header .nav_bar .container .nav > .nav_login_register {
+  width: 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-left: 50px;
+}
+.about_warp .about_header .nav_bar .container .nav > .nav_login_register > a {
+  display: block;
+  font-size: 16px;
+  color: white;
+  text-align: center;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+.about_warp .about_header .nav_bar .container .nav > .nav_login_register > a:hover {
+  color: #85B0DE;
+}
+.about_warp .about_header .nav_bar .container .nav > .nav_login_register .login {
+  float: left;
+}
+.about_warp .about_header .nav_bar .container .nav > .nav_login_register .login_right_line {
+  width: 1px;
+  height: 15px;
+  margin-top: 1px;
+  background-color: white;
+}
+.about_warp .about_header .nav_bar .container .nav > .nav_login_register .register {
+  float: right;
 }
 .about_warp .about_header .variety_banner {
   width: 100%;
@@ -115,8 +148,8 @@
   height: 418px;
 }
 .about_warp .about_main .container .main_card {
-  margin-top: 80px;
-  margin-bottom: 80px;
+  margin-top: 150px;
+  margin-bottom: 150px;
   background-color: white;
   -webkit-box-shadow: 0px 3px 26px 2px rgba(14, 72, 180, 0.08);
           box-shadow: 0px 3px 26px 2px rgba(14, 72, 180, 0.08);
@@ -134,9 +167,9 @@
   text-align: center;
 }
 .about_warp .about_main .container .main_card .main_card_logo {
-  width: 68px;
-  height: 68px;
-  background: url("../images/logo/logo_2.png") no-repeat center;
+  width: 163px;
+  height: 114px;
+  background: url("../images/logo/logo_2.png") no-repeat;
   margin-top: 80px;
 }
 .about_warp .about_main .container .main_card .main_card_detail {
@@ -145,7 +178,6 @@
   color: #585858;
   line-height: 24px;
   text-align: center;
-  border-bottom: 1px dashed black;
 }
 .about_warp .about_main .container .main_card .main_card_detail > p {
   margin-top: 60px;
@@ -154,29 +186,27 @@
   margin-top: 35px;
   padding-bottom: 75px;
 }
-.about_warp .about_main .container .main_card .serve {
-  width: 1200px;
-  margin-left: auto;
-  margin-right: auto;
+.about_warp .serve {
+  background-color: #F0F2F7;
 }
-.about_warp .about_main .container .main_card .serve .serve-header {
-  margin-top: 150px;
+.about_warp .serve .container {
+  padding-top: 150px;
+  padding-bottom: 150px;
 }
-.about_warp .about_main .container .main_card .serve .serve-header > h3 {
+.about_warp .serve .container .serve-header > h3 {
   text-align: center;
   color: #1b1b1b;
   font-size: 32px;
-  font-weight: bold;
   margin-bottom: 10px;
   white-space: nowrap;
 }
-.about_warp .about_main .container .main_card .serve .serve-header > p {
+.about_warp .serve .container .serve-header > p {
   text-align: center;
   font-size: 19px;
   color: #585858;
   line-height: 24px;
 }
-.about_warp .about_main .container .main_card .serve .serve_tab {
+.about_warp .serve .container .serve_tab {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -184,14 +214,13 @@
       -ms-flex-pack: justify;
           justify-content: space-between;
   margin-top: 35px;
-  margin-bottom: 150px;
   padding-left: 40px;
   padding-right: 40px;
 }
-.about_warp .about_main .container .main_card .serve .serve_tab .serve_item {
+.about_warp .serve .container .serve_tab .serve_item {
   width: 350px;
   height: 400px;
-  background-color: #ffe6b5;
+  background-color: #83B4E5;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -204,7 +233,7 @@
   cursor: pointer;
   border-radius: 8px;
 }
-.about_warp .about_main .container .main_card .serve .serve_tab .serve_item .serve_content {
+.about_warp .serve .container .serve_tab .serve_item .serve_content {
   width: 238px;
   height: 228px;
   display: -webkit-box;
@@ -221,36 +250,36 @@
       -ms-flex-align: center;
           align-items: center;
 }
-.about_warp .about_main .container .main_card .serve .serve_tab .serve_item .serve_content .content_icon {
+.about_warp .serve .container .serve_tab .serve_item .serve_content .content_icon {
   width: 110px;
   height: 99px;
   background: url("../images/icon/about_icon_online.png") no-repeat;
 }
-.about_warp .about_main .container .main_card .serve .serve_tab .serve_item .serve_content .content_detail > h3 {
+.about_warp .serve .container .serve_tab .serve_item .serve_content .content_detail > h3 {
   text-align: center;
-  color: #000527;
+  color: #003366;
   font-size: 24px;
   margin-bottom: 10px;
 }
-.about_warp .about_main .container .main_card .serve .serve_tab .serve_item .serve_content .content_detail > p {
+.about_warp .serve .container .serve_tab .serve_item .serve_content .content_detail > p {
   text-align: center;
   font-size: 14px;
-  color: #505050;
+  color: #003366;
   line-height: 24px;
 }
-.about_warp .about_main .container .main_card .serve .serve_tab .serve_item:hover {
-  background-color: #1b1b1b;
+.about_warp .serve .container .serve_tab .serve_item:hover {
+  background-color: #003366;
 }
-.about_warp .about_main .container .main_card .serve .serve_tab .serve_item:hover .serve_content .content_detail > h3 {
-  color: #ffe6b5;
+.about_warp .serve .container .serve_tab .serve_item:hover .serve_content .content_detail > h3 {
+  color: #85B0DE;
 }
-.about_warp .about_main .container .main_card .serve .serve_tab .serve_item:hover .serve_content .content_detail > p {
-  color: #ffe6b5;
+.about_warp .serve .container .serve_tab .serve_item:hover .serve_content .content_detail > p {
+  color: #85B0DE;
 }
-.about_warp .about_main .container .main_card .serve .serve_tab .serve_online:hover .serve_content .content_icon {
-  background: url("../images/icon/about_icon_online_sel.png") no-repeat;
+.about_warp .serve .container .serve_tab .serve_online:hover .serve_content .content_icon {
+  background: url("../images/icon/about_icon_online_2.png") no-repeat;
 }
-.about_warp .about_main .container .main_card .serve .serve_tab .serve_butt {
+.about_warp .serve .container .serve_tab .serve_butt {
   width: 383px;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
@@ -260,10 +289,10 @@
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
-.about_warp .about_main .container .main_card .serve .serve_tab .serve_butt .butt_content {
+.about_warp .serve .container .serve_tab .serve_butt .butt_content {
   width: 350px;
   height: 400px;
-  background-color: #1b1b1b;
+  background-color: #003366;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -277,7 +306,7 @@
   margin-left: 16.5px;
   cursor: pointer;
 }
-.about_warp .about_main .container .main_card .serve .serve_tab .serve_butt .butt_content .content_detail {
+.about_warp .serve .container .serve_tab .serve_butt .butt_content .content_detail {
   width: 238px;
   height: 228px;
   display: -webkit-box;
@@ -294,36 +323,34 @@
       -ms-flex-align: center;
           align-items: center;
 }
-.about_warp .about_main .container .main_card .serve .serve_tab .serve_butt .butt_content .content_detail .detail_icon {
+.about_warp .serve .container .serve_tab .serve_butt .butt_content .content_detail .detail_icon {
   width: 102px;
   height: 106px;
   background: url("../images/icon/about_icon_butt.png") no-repeat;
 }
-.about_warp .about_main .container .main_card .serve .serve_tab .serve_butt .butt_content .content_detail .detail_text > h3 {
+.about_warp .serve .container .serve_tab .serve_butt .butt_content .content_detail .detail_text > h3 {
   text-align: center;
-  color: #ffe6b5;
+  color: #85B0DE;
   font-size: 24px;
   margin-bottom: 12px;
 }
-.about_warp .about_main .container .main_card .serve .serve_tab .serve_butt .butt_content .content_detail .detail_text > p {
+.about_warp .serve .container .serve_tab .serve_butt .butt_content .content_detail .detail_text > p {
   text-align: center;
   font-size: 14px;
-  color: #ffe6b5;
+  color: #85B0DE;
   line-height: 24px;
 }
-.about_warp .about_main .container .main_card .serve .serve_tab .serve_consult .serve_content .content_icon {
+.about_warp .serve .container .serve_tab .serve_consult .serve_content .content_icon {
   width: 127px;
   height: 96px;
   background: url("../images/icon/about_icon_solute.png") no-repeat;
 }
-.about_warp .about_main .container .main_card .serve .serve_tab .serve_consult:hover .serve_content .content_icon {
-  background: url("../images/icon/about_icon_solute_sel.png") no-repeat;
+.about_warp .serve .container .serve_tab .serve_consult:hover .serve_content .content_icon {
+  background: url("../images/icon/about_icon_solute_2.png") no-repeat;
 }
 .about_warp .about_advantage {
   width: 100%;
-  height: 750px;
-  background: url("../images/img/img_adv.png") no-repeat;
-  background-size: contain;
+  height: 556px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -336,27 +363,30 @@
 }
 .about_warp .about_advantage .advantage_content {
   width: 62.5%;
-  padding: 100px 115px;
+  height: 365px;
+  padding: 55px 115px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   background: rgba(255, 230, 181, 0.5);
   border-radius: 8px;
+  background: url("../images/img/img_adv.png") no-repeat;
 }
 .about_warp .about_advantage .advantage_content .detail_title > h3 {
   font-size: 32px;
-  color: #1b1b1b;
+  color: #83B4E5;
   font-weight: bold;
   margin-bottom: 10px;
 }
 .about_warp .about_advantage .advantage_content .detail_title > p {
   font-size: 19px;
-  color: #1b1b1b;
+  color: #83B4E5;
 }
 .about_warp .about_advantage .advantage_content .content_grid {
   margin-top: 45px;
   display: grid;
   grid-template-columns: repeat(5, 1fr);
-  grid-gap: 60px;
+  grid-column-gap: 60px;
+  grid-row-gap: 40px;
 }
 .about_warp .about_advantage .advantage_content .content_grid .grid_item .item_detail {
   display: -webkit-box;
@@ -372,7 +402,7 @@
 }
 .about_warp .about_advantage .advantage_content .content_grid .grid_item .item_detail .detail_text {
   font-size: 19px;
-  color: #1b1b1b;
+  color: #83B4E5;
   line-height: 22px;
   white-space: nowrap;
   letter-spacing: 2px;
@@ -420,6 +450,9 @@
 .about_warp .about_advantage .advantage_content .content_grid .grid_item:nth-child(14) .detail_icon {
   background: url("../images/icon/icon_advantage_14.png") no-repeat;
 }
+.about_warp .about_register {
+  background-color: #F0F2F7;
+}
 .about_warp .about_register .container {
   height: 400px;
   display: -webkit-box;
@@ -435,29 +468,25 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-shadow: 0px 3px 26px 2px rgba(14, 72, 180, 0.08);
-          box-shadow: 0px 3px 26px 2px rgba(14, 72, 180, 0.08);
   border-radius: 8px;
-  margin-top: 50px;
-  margin-bottom: 50px;
 }
 .about_warp .about_register .container .register_quality > h3 {
   font-size: 24px;
-  color: #1b1b1b;
+  color: #003366;
   font-weight: bold;
   margin-bottom: 18px;
   text-align: center;
 }
 .about_warp .about_register .container .register_quality > p {
   font-size: 14px;
-  color: #585858;
+  color: #003366;
   margin-bottom: 16px;
 }
 .about_warp .about_register .container .register_btn {
   width: 480px;
   height: 86px;
-  border: 1px solid #1b1b1b;
-  color: #1b1b1b;
+  border: 1px solid #003366;
+  color: #003366;
   border-radius: 43px;
   font-size: 18px;
   display: -webkit-box;
@@ -472,82 +501,153 @@
   cursor: pointer;
 }
 .about_warp .about_register .container .register_btn:hover {
-  background-color: #1b1b1b;
-  color: #ffe6b5;
+  background-color: #003366;
+  color: #85B0DE;
 }
 .about_warp .footer {
   width: 100%;
-  background-color: #1b1b1b;
+  /*.container {
+      //border: 1px solid #000;
+      .footer_main {
+        display: flex;
+        justify-content: space-between;
+        padding-top: 50px;
+        margin-bottom: 30px;
+        > div {
+          font-size: 14px;
+          line-height: 24px;
+          > a {
+            color: #eeeeee;
+            white-space: nowrap;
+            &:first-child {
+              color: white;
+            }
+            &:hover {
+              color: #ffe6b5;
+            }
+          }
+          > p {
+            color: #eeeeee;
+          }
+        }
+        .footer_logo {
+          > a {
+            width: 87px;
+            height: 25px;
+            //border: 1px solid pink;
+            background: url("../images/logo/home_logo.png") no-repeat;
+            text-indent: -9999px;
+          }
+        }
+        .footer_risk {
+          width: 550px;
+          //height: 135px;
+        }
+        .footer_help {
+          width: 56px;
+          height: 134px;
+        }
+        .footer_account {
+          width: 57px;
+          height: 86px;
+        }
+        .footer_about_us {
+          width: 56px;
+          height: 110px;
+        }
+      }
+      .footer_policy {
+        //border: 1px solid white;
+        margin-top: 30px;
+        margin-bottom: 30px;
+        font-size: 14px;
+        line-height: 24px;
+        > h3 {
+          color: white;
+        }
+        > p {
+          color: #eeeeee;
+        }
+      }
+    }*/
+  /*.footer_line {
+      width: 100%;
+      height: 1px;
+      background-color: #ffe6b5;
+    }*/
 }
-.about_warp .footer .container .footer_main {
+.about_warp .footer .footer_main {
+  background: url("../images/bg/bg_di.png") no-repeat;
+}
+.about_warp .footer .footer_main .container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  padding-top: 50px;
-  margin-bottom: 30px;
+  padding-top: 30px;
+  padding-bottom: 30px;
 }
-.about_warp .footer .container .footer_main > div {
+.about_warp .footer .footer_main .container > div {
   font-size: 14px;
   line-height: 24px;
 }
-.about_warp .footer .container .footer_main > div > a {
+.about_warp .footer .footer_main .container > div > a {
   color: #eeeeee;
   white-space: nowrap;
 }
-.about_warp .footer .container .footer_main > div > a:first-child {
+.about_warp .footer .footer_main .container > div > a:first-child {
   color: white;
 }
-.about_warp .footer .container .footer_main > div > a:hover {
-  color: #ffe6b5;
+.about_warp .footer .footer_main .container > div > a:hover {
+  color: #85B0DE;
 }
-.about_warp .footer .container .footer_main > div > p {
+.about_warp .footer .footer_main .container > div > p {
   color: #eeeeee;
 }
-.about_warp .footer .container .footer_main .footer_logo > a {
-  width: 87px;
-  height: 25px;
+.about_warp .footer .footer_main .container .footer_logo > a {
+  width: 55px;
+  height: 39px;
   background: url("../images/logo/home_logo.png") no-repeat;
   text-indent: -9999px;
 }
-.about_warp .footer .container .footer_main .footer_risk {
+.about_warp .footer .footer_main .container .footer_risk {
   width: 550px;
 }
-.about_warp .footer .container .footer_main .footer_help {
+.about_warp .footer .footer_main .container .footer_help {
   width: 56px;
   height: 134px;
 }
-.about_warp .footer .container .footer_main .footer_account {
+.about_warp .footer .footer_main .container .footer_account {
   width: 57px;
   height: 86px;
 }
-.about_warp .footer .container .footer_main .footer_about_us {
+.about_warp .footer .footer_main .container .footer_about_us {
   width: 56px;
   height: 110px;
 }
-.about_warp .footer .container .footer_policy {
-  margin-top: 30px;
-  margin-bottom: 30px;
+.about_warp .footer .footer_main .footer_line {
+  width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  height: 1px;
+  background-color: white;
+}
+.about_warp .footer .footer_main .footer_policy {
   font-size: 14px;
   line-height: 24px;
 }
-.about_warp .footer .container .footer_policy > h3 {
+.about_warp .footer .footer_main .footer_policy > h3 {
   color: white;
 }
-.about_warp .footer .container .footer_policy > p {
+.about_warp .footer .footer_main .footer_policy > p {
   color: #eeeeee;
-}
-.about_warp .footer .footer_line {
-  width: 100%;
-  height: 1px;
-  background-color: #ffe6b5;
 }
 .about_warp .footer .footer_address {
   font-style: normal;
   color: white;
-  background-color: black;
+  background-color: #003366;
 }
 .about_warp .footer .footer_address p {
   text-align: center;
@@ -556,11 +656,10 @@
 }
 @media screen and (min-device-width: 1368px) and (max-device-width: 1440px) {
   .about_warp .about_advantage .advantage_content {
-    padding: 0;
-    margin-top: -222px;
+    padding: 55px 10px;
   }
   .about_warp .about_advantage .advantage_content .content_grid {
-    grid-gap: 50px;
+    grid-column-gap: 46px;
   }
 }
 @media (max-width: 1366px) {
@@ -572,9 +671,10 @@
     height: 528px;
   }
   .about_warp .about_advantage .advantage_content {
-    padding: 0;
+    padding: 55px 10px;
   }
   .about_warp .about_advantage .advantage_content .content_grid {
-    grid-gap: 40px;
+    grid-column-gap: 36px;
+    grid-row-gap: 40px;
   }
 }
