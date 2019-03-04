@@ -1,39 +1,10 @@
 /*风险提示css*/
-/*容器宽度*/
-.container {
-  width: 1200px;
-  margin-left: auto;
-  margin-right: auto;
-}
-/*自定义滚动条*/
-.risk_warp {
-  position: relative;
-  height: 100%;
-  overflow-y: auto;
-  z-index: 300;
-  /*定义滚动条轨道 内阴影+圆角*/
-  /*定义滑块 内阴影+圆角*/
-}
-.risk_warp::-webkit-scrollbar {
-  width: 16px;
-}
-.risk_warp::-webkit-scrollbar-track {
-  background-color: #f1f1f1;
-}
-.risk_warp::-webkit-scrollbar-thumb {
-  background-color: #999999;
-}
-/*风险提示*/
-.risk_warp {
-  /*头部*/
-  /*高风险*/
-  /*底部*/
-}
-.risk_warp .risk_header {
+/*头部*/
+.risk_header {
   /*导航条*/
   /*banner*/
 }
-.risk_warp .risk_header .nav_bar {
+.risk_header .nav_bar {
   width: 100%;
   height: 60px;
   background: rgba(0, 51, 102, 0.8);
@@ -41,7 +12,7 @@
   top: 0;
   z-index: 200;
 }
-.risk_warp .risk_header .nav_bar .container {
+.risk_header .nav_bar .container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -49,19 +20,19 @@
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
-.risk_warp .risk_header .nav_bar .container .logo > a {
+.risk_header .nav_bar .container .logo > a {
   width: 55px;
   height: 40px;
   margin-top: 10px;
   background: url("../images/logo/home_logo.png") no-repeat;
   text-indent: -9999px;
 }
-.risk_warp .risk_header .nav_bar .container .nav {
+.risk_header .nav_bar .container .nav {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
-.risk_warp .risk_header .nav_bar .container .nav > a {
+.risk_header .nav_bar .container .nav > a {
   height: 60px;
   padding: 0 35px;
   display: -webkit-box;
@@ -74,11 +45,11 @@
       -ms-flex-align: center;
           align-items: center;
 }
-.risk_warp .risk_header .nav_bar .container .nav > a > li > span {
+.risk_header .nav_bar .container .nav > a > li > span {
   color: white;
   display: block;
 }
-.risk_warp .risk_header .nav_bar .container .nav > a > li > em {
+.risk_header .nav_bar .container .nav > a > li > em {
   display: none;
   height: 1px;
   background-color: white;
@@ -88,19 +59,19 @@
   right: 0;
   margin: auto;
 }
-.risk_warp .risk_header .nav_bar .container .nav > a:hover {
+.risk_header .nav_bar .container .nav > a:hover {
   background-color: #85B0DE;
 }
-.risk_warp .risk_header .nav_bar .container .nav > a:hover li > em {
+.risk_header .nav_bar .container .nav > a:hover li > em {
   display: block;
 }
-.risk_warp .risk_header .nav_bar .container .nav > a.active {
+.risk_header .nav_bar .container .nav > a.active {
   background-color: #85B0DE;
 }
-.risk_warp .risk_header .nav_bar .container .nav > a.active li > em {
+.risk_header .nav_bar .container .nav > a.active li > em {
   display: block;
 }
-.risk_warp .risk_header .nav_bar .container .nav > .nav_login_register {
+.risk_header .nav_bar .container .nav > .nav_login_register {
   width: 100px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -113,7 +84,7 @@
           align-items: center;
   margin-left: 50px;
 }
-.risk_warp .risk_header .nav_bar .container .nav > .nav_login_register > a {
+.risk_header .nav_bar .container .nav > .nav_login_register > a {
   display: block;
   font-size: 16px;
   color: white;
@@ -121,26 +92,26 @@
   padding-left: 5px;
   padding-right: 5px;
 }
-.risk_warp .risk_header .nav_bar .container .nav > .nav_login_register > a:hover {
+.risk_header .nav_bar .container .nav > .nav_login_register > a:hover {
   color: #85B0DE;
 }
-.risk_warp .risk_header .nav_bar .container .nav > .nav_login_register .login {
+.risk_header .nav_bar .container .nav > .nav_login_register .login {
   float: left;
 }
-.risk_warp .risk_header .nav_bar .container .nav > .nav_login_register .login_right_line {
+.risk_header .nav_bar .container .nav > .nav_login_register .login_right_line {
   width: 1px;
   height: 15px;
   margin-top: 1px;
   background-color: white;
 }
-.risk_warp .risk_header .nav_bar .container .nav > .nav_login_register .register {
+.risk_header .nav_bar .container .nav > .nav_login_register .register {
   float: right;
 }
-.risk_warp .risk_header .risk_banner {
+.risk_header .risk_banner {
   width: 100%;
   background: url("../images/bg/bg_2.png") no-repeat;
 }
-.risk_warp .risk_header .risk_banner .container {
+.risk_header .risk_banner .container {
   height: 480px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -157,7 +128,7 @@
           align-items: center;
   padding-top: 30px;
 }
-.risk_warp .risk_header .risk_banner .container .banner_content {
+.risk_header .risk_banner .container .banner_content {
   width: 100%;
   height: 219px;
   background: rgba(0, 51, 102, 0.8);
@@ -173,29 +144,30 @@
       -ms-flex-pack: center;
           justify-content: center;
 }
-.risk_warp .risk_header .risk_banner .container .banner_content .banner_h2 {
+.risk_header .risk_banner .container .banner_content .banner_h2 {
   font-size: 72px;
   margin-bottom: 20px;
   color: #83B4E5;
 }
-.risk_warp .risk_header .risk_banner .container .banner_content > p {
+.risk_header .risk_banner .container .banner_content > p {
   font-size: 24px;
   line-height: 40px;
   padding-left: 40px;
   padding-right: 40px;
   color: #83B4E5;
 }
-.risk_warp .risk_header .risk_banner .container .banner_line {
+.risk_header .risk_banner .container .banner_line {
   width: 100%;
   height: 10px;
   background: #003366;
   opacity: 0.8;
   margin-top: 10px;
 }
-.risk_warp .high_risk .container {
+/*高风险*/
+.high_risk .container {
   margin-top: 100px;
 }
-.risk_warp .high_risk .container .high_risk_h3 {
+.high_risk .container .high_risk_h3 {
   margin-bottom: 40px;
   font-size: 24px;
   font-family: PingFang-SC-Heavy;
@@ -203,97 +175,98 @@
   font-weight: bold;
   line-height: 40px;
 }
-.risk_warp .high_risk .container .high_risk_content .high_risk_h4 {
+.high_risk .container .high_risk_content .high_risk_h4 {
   color: #1b1b1b;
   font-size: 24px;
   font-weight: bold;
   margin-bottom: 10px;
 }
-.risk_warp .high_risk .container .high_risk_content > p {
+.high_risk .container .high_risk_content > p {
   color: #585858;
   font-size: 14px;
   line-height: 24px;
   margin-bottom: 40px;
 }
-.risk_warp .high_risk .container .high_risk_content > p.hint {
+.high_risk .container .high_risk_content > p.hint {
   color: #003366;
 }
-.risk_warp .footer {
+/*底部*/
+.footer {
   width: 100%;
   /*.container {
-      //border: 1px solid #000;
-      .footer_main {
-        display: flex;
-        justify-content: space-between;
-        padding-top: 50px;
-        margin-bottom: 30px;
-        > div {
-          font-size: 14px;
-          line-height: 24px;
-          > a {
-            color: #eeeeee;
-            white-space: nowrap;
-            &:first-child {
-              color: white;
-            }
-            &:hover {
-              color: #ffe6b5;
-            }
-          }
-          > p {
-            color: #eeeeee;
-          }
-        }
-        .footer_logo {
-          > a {
-            width: 87px;
-            height: 25px;
-            //border: 1px solid pink;
-            background: url("../images/logo/home_logo.png") no-repeat;
-            text-indent: -9999px;
-          }
-        }
-        .footer_risk {
-          width: 550px;
-          //height: 135px;
-        }
-        .footer_help {
-          width: 56px;
-          height: 134px;
-        }
-        .footer_account {
-          width: 57px;
-          height: 86px;
-        }
-        .footer_about_us {
-          width: 56px;
-          height: 110px;
-        }
-      }
-      .footer_policy {
-        //border: 1px solid white;
-        margin-top: 30px;
-        margin-bottom: 30px;
+    //border: 1px solid #000;
+    .footer_main {
+      display: flex;
+      justify-content: space-between;
+      padding-top: 50px;
+      margin-bottom: 30px;
+      > div {
         font-size: 14px;
         line-height: 24px;
-        > h3 {
-          color: white;
+        > a {
+          color: #eeeeee;
+          white-space: nowrap;
+          &:first-child {
+            color: white;
+          }
+          &:hover {
+            color: #ffe6b5;
+          }
         }
         > p {
           color: #eeeeee;
         }
       }
-    }*/
+      .footer_logo {
+        > a {
+          width: 87px;
+          height: 25px;
+          //border: 1px solid pink;
+          background: url("../images/logo/home_logo.png") no-repeat;
+          text-indent: -9999px;
+        }
+      }
+      .footer_risk {
+        width: 550px;
+        //height: 135px;
+      }
+      .footer_help {
+        width: 56px;
+        height: 134px;
+      }
+      .footer_account {
+        width: 57px;
+        height: 86px;
+      }
+      .footer_about_us {
+        width: 56px;
+        height: 110px;
+      }
+    }
+    .footer_policy {
+      //border: 1px solid white;
+      margin-top: 30px;
+      margin-bottom: 30px;
+      font-size: 14px;
+      line-height: 24px;
+      > h3 {
+        color: white;
+      }
+      > p {
+        color: #eeeeee;
+      }
+    }
+  }*/
   /*.footer_line {
-      width: 100%;
-      height: 1px;
-      background-color: #ffe6b5;
-    }*/
+    width: 100%;
+    height: 1px;
+    background-color: #ffe6b5;
+  }*/
 }
-.risk_warp .footer .footer_main {
+.footer .footer_main {
   background: url("../images/bg/bg_di.png") no-repeat;
 }
-.risk_warp .footer .footer_main .container {
+.footer .footer_main .container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -303,67 +276,67 @@
   padding-top: 30px;
   padding-bottom: 30px;
 }
-.risk_warp .footer .footer_main .container > div {
+.footer .footer_main .container > div {
   font-size: 14px;
   line-height: 24px;
 }
-.risk_warp .footer .footer_main .container > div > a {
+.footer .footer_main .container > div > a {
   color: #eeeeee;
   white-space: nowrap;
 }
-.risk_warp .footer .footer_main .container > div > a:first-child {
+.footer .footer_main .container > div > a:first-child {
   color: white;
 }
-.risk_warp .footer .footer_main .container > div > a:hover {
+.footer .footer_main .container > div > a:hover {
   color: #85B0DE;
 }
-.risk_warp .footer .footer_main .container > div > p {
+.footer .footer_main .container > div > p {
   color: #eeeeee;
 }
-.risk_warp .footer .footer_main .container .footer_logo > a {
+.footer .footer_main .container .footer_logo > a {
   width: 55px;
   height: 39px;
   background: url("../images/logo/home_logo.png") no-repeat;
   text-indent: -9999px;
 }
-.risk_warp .footer .footer_main .container .footer_risk {
+.footer .footer_main .container .footer_risk {
   width: 550px;
 }
-.risk_warp .footer .footer_main .container .footer_help {
+.footer .footer_main .container .footer_help {
   width: 56px;
   height: 134px;
 }
-.risk_warp .footer .footer_main .container .footer_account {
+.footer .footer_main .container .footer_account {
   width: 57px;
   height: 86px;
 }
-.risk_warp .footer .footer_main .container .footer_about_us {
+.footer .footer_main .container .footer_about_us {
   width: 56px;
   height: 110px;
 }
-.risk_warp .footer .footer_main .footer_line {
+.footer .footer_main .footer_line {
   width: 1200px;
   margin-left: auto;
   margin-right: auto;
   height: 1px;
   background-color: white;
 }
-.risk_warp .footer .footer_main .footer_policy {
+.footer .footer_main .footer_policy {
   font-size: 14px;
   line-height: 24px;
 }
-.risk_warp .footer .footer_main .footer_policy > h3 {
+.footer .footer_main .footer_policy > h3 {
   color: white;
 }
-.risk_warp .footer .footer_main .footer_policy > p {
+.footer .footer_main .footer_policy > p {
   color: #eeeeee;
 }
-.risk_warp .footer .footer_address {
+.footer .footer_address {
   font-style: normal;
   color: white;
   background-color: #003366;
 }
-.risk_warp .footer .footer_address p {
+.footer .footer_address p {
   text-align: center;
   height: 74px;
   line-height: 74px;

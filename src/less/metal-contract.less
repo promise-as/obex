@@ -1,444 +1,254 @@
 /*金属合约css*/
 
-/*容器宽度*/
-.container {
-  width: 1200px;
-  margin-left: auto;
-  margin-right: auto;
-  //border: 1px solid pink;
-}
-
-/*自定义滚动条*/
-.metal_warp{
-  position: relative;
-  height: 100%;
-  overflow-y: auto;
-  z-index: 300;
-  &::-webkit-scrollbar {
-    width: 16px;
-    //z-index: 300;
-  }
-  /*定义滚动条轨道 内阴影+圆角*/
-  &::-webkit-scrollbar-track
-  {
-    background-color: #f1f1f1;
-  }
-  /*定义滑块 内阴影+圆角*/
-  &::-webkit-scrollbar-thumb
-  {
-    background-color: #999999;
-  }
-}
-
-/*金属合约*/
-.metal_warp{
-  /*头部*/
-  .metal_header{
-    background: url("../images/bg/bg_gold.png") no-repeat;
-    /*导航条*/
-    .nav_bar {
-      width: 100%;
-      height: 60px;
-      //background-color: #003366;
-      background: rgba(0, 51, 102, 0.8);
-      //opacity: 0.8;
-      position: fixed;
-      top: 0;
-      //left: 0;
-      z-index: 200;
-      //box-shadow: 0 2px 2px rgba(0,0,0,.2);
-      //border: 1px solid #000;
-      .container {
-        display: flex;
-        justify-content: space-between;
-        .logo {
-          > a {
-            width: 55px;
-            height: 40px;
-            //border: 1px solid red;
-            margin-top: 10px;
-            background: url("../images/logo/home_logo.png") no-repeat;
-            text-indent: -9999px;
-          }
-        }
-        .nav {
-          //border: 1px solid red;
-          display: flex;
-          > a {
-            //display: block;
-            height: 60px;
-            padding: 0 35px;
-            //border: 1px solid blue;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            > li {
-              //border: 1px solid blue;
-              //height: 60px;
-              > span {
-                color: white;
-                display: block;
-                //padding: 0 35px;
-                //line-height: 60px;
-                //border: 1px solid red;
-              }
-              > em {
-                display: none;
-                //width: 30px;
-                //width: 100%;
-                height: 1px;
-                //border-radius: 50%;
-                background-color: white;
-                position: relative;
-                top: 6px;
-                left: 0;
-                right: 0;
-                margin: auto;
-              }
-            }
-            &:hover {
-              li {
-                > em {
-                  display: block;
-                }
-              }
-              background-color: #85B0DE;
-            }
-            &.active {
-              li {
-                > em {
-                  display: block;
-                }
-              }
-              background-color: #85B0DE;
-            }
-          }
-          > .nav_login_register {
-            width: 100px;
-            //border: 1px solid green;
-            //display: none;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-left: 50px;
-            > a {
-              //width: 50px;
-              //border: 1px solid blue;
-              display: block;
-              font-size: 16px;
-              color: white;
-              text-align: center;
-              //margin-top: 21px;
-              &:hover {
-                color: #85B0DE;
-              }
-              padding-left: 5px;
-              padding-right: 5px;
-            }
-            .login {
-              float: left;
-            }
-            .login_right_line {
-              width: 1px;
-              height: 15px;
-              margin-top: 1px;
-              background-color: white;
-            }
-            .register {
-              float: right;
-            }
-          }
-        }
-      }
-    }
-    /*banner*/
-    .variety_banner{
-      width: 100%;
-      margin-top: 60px;
-      .container{
-        height: 418px;
-      }
-    }
-  }
-  /*主体*/
-  .metal_main{
-    .container{
-      //border: 1px solid #000;
-      margin-bottom: 80px;
-      .main_card{
-        margin-top: 80px;
-        background-color: white;
-        box-shadow:0px 3px 26px 2px rgba(14,72,180,0.08);
-        border-radius:8px;
-        display: flex;
-        flex-flow: column nowrap;
-        align-items: center;
-        text-align: center;
-        .main_card_title{
-          margin-top: 80px;
-          > h2{
-            font-size: 30px;
-            color: #1b1b1b;
-            font-weight: bold;
-          }
-          > span{
-            font-size: 14px;
-            color: #585858;
-            display: block;
-            margin-top: 12px;
-          }
-        }
-        .main_card_detail{
-          width: 1000px;
-          font-size: 14px;
-          color: #505050;
-          line-height: 24px;
-          text-align: left;
-          margin-bottom: 150px;
-          > p{
-            margin-top: 35px;
-            &:first-child{
-              margin-top: 50px;
-            }
-          }
-        }
-        .main_product{
-          .product_tab{
-            display: flex;
-            .product_column{
-              text-align: center;
-              line-height: 60px;
-              color: #585858;
-              font-size: 16px;
-              .product_name{
-                background-color: #003366;
-                color: #83B4E5;
-                font-size: 19px;
-              }
-              &:first-child{
-                width: 185px;
-                .product_gold{
-                  border-left: 1px solid #E6E6E6;
-                }
-                .product_silver{
-                  border-left: 1px solid #E6E6E6;
-                }
-              }
-              &:nth-child(2){
-                width: 124px;
-              }
-              &:nth-child(3){
-                //flex: 1;
-                width: 349px;
-              }
-              &:last-child{
-                //width: 433px;
-                flex: 1;
-                .product_name{
-                  border-right: 1px solid #0E48B4;
-                }
-                .product_time{
-                  height: 121px;
-                  display: flex;
-                  justify-content: center;
-                  align-items: center;
-                  color: #505050;
-                  .time_container{
-                    display: flex;
-                    flex-flow: column nowrap;
-                    justify-content: space-between;
-                    text-align: left;
-                    font-size: 14px;
-                    line-height: 24px;
-                    //margin-top: -8px;
-                    padding-left: 30px;
-                    padding-right: 30px;
-                  }
-                }
-              }
-              > div{
-                height: 60px;
-                //border: 1px solid #000;
-                border-right: 1px solid #E6E6E6;
-                border-bottom: 1px solid #E6E6E6;
-                background-color: white;
-              }
-              .product_gold{
-                color: #505050;
-              }
-              .product_silver{
-                color: #505050;
-              }
-            }
-          }
-          .product_explain{
-            height: 56px;
-            background-color: #F0F2F7;
-            text-align: center;
-            line-height: 56px;
-            font-size: 14px;
-            color: #FF1818;
-            margin-bottom: 150px;
-          }
-        }
-      }
-    }
-  }
-  /*底部*/
-  .footer {
+/*头部*/
+.metal_header{
+  background: url("../images/bg/bg_gold.png") no-repeat;
+  /*导航条*/
+  .nav_bar {
     width: 100%;
-    //background-color: #1b1b1b;
-    .footer_main {
-      //height: 338px;
-      background: url("../images/bg/bg_di.png") no-repeat;
-      .container {
+    height: 60px;
+    //background-color: #003366;
+    background: rgba(0, 51, 102, 0.8);
+    //opacity: 0.8;
+    position: fixed;
+    top: 0;
+    //left: 0;
+    z-index: 200;
+    //box-shadow: 0 2px 2px rgba(0,0,0,.2);
+    //border: 1px solid #000;
+    .container {
+      display: flex;
+      justify-content: space-between;
+      .logo {
+        > a {
+          width: 55px;
+          height: 40px;
+          //border: 1px solid red;
+          margin-top: 10px;
+          background: url("../images/logo/home_logo.png") no-repeat;
+          text-indent: -9999px;
+        }
+      }
+      .nav {
+        //border: 1px solid red;
         display: flex;
-        justify-content: space-between;
-        padding-top: 30px;
-        padding-bottom: 30px;
-        > div {
-          font-size: 14px;
-          line-height: 24px;
-          > a {
-            color: #eeeeee;
-            white-space: nowrap;
-            &:first-child {
+        > a {
+          //display: block;
+          height: 60px;
+          padding: 0 35px;
+          //border: 1px solid blue;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          > li {
+            //border: 1px solid blue;
+            //height: 60px;
+            > span {
               color: white;
+              display: block;
+              //padding: 0 35px;
+              //line-height: 60px;
+              //border: 1px solid red;
             }
+            > em {
+              display: none;
+              //width: 30px;
+              //width: 100%;
+              height: 1px;
+              //border-radius: 50%;
+              background-color: white;
+              position: relative;
+              top: 6px;
+              left: 0;
+              right: 0;
+              margin: auto;
+            }
+          }
+          &:hover {
+            li {
+              > em {
+                display: block;
+              }
+            }
+            background-color: #85B0DE;
+          }
+          &.active {
+            li {
+              > em {
+                display: block;
+              }
+            }
+            background-color: #85B0DE;
+          }
+        }
+        > .nav_login_register {
+          width: 100px;
+          //border: 1px solid green;
+          //display: none;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          margin-left: 50px;
+          > a {
+            //width: 50px;
+            //border: 1px solid blue;
+            display: block;
+            font-size: 16px;
+            color: white;
+            text-align: center;
+            //margin-top: 21px;
             &:hover {
               color: #85B0DE;
             }
+            padding-left: 5px;
+            padding-right: 5px;
           }
-          > p {
-            color: #eeeeee;
+          .login {
+            float: left;
           }
-        }
-        .footer_logo {
-          > a {
-            width: 55px;
-            height: 39px;
-            //border: 1px solid red;
-            background: url("../images/logo/home_logo.png") no-repeat;
-            text-indent: -9999px;
+          .login_right_line {
+            width: 1px;
+            height: 15px;
+            margin-top: 1px;
+            background-color: white;
           }
-        }
-        .footer_risk {
-          width: 550px;
-          //height: 135px;
-        }
-        .footer_help {
-          width: 56px;
-          height: 134px;
-        }
-        .footer_account {
-          width: 57px;
-          height: 86px;
-        }
-        .footer_about_us {
-          width: 56px;
-          height: 110px;
-        }
-
-      }
-      .footer_line {
-        width: 1200px;
-        margin-left: auto;
-        margin-right: auto;
-        height: 1px;
-        background-color: white;
-      }
-      .footer_policy {
-        //border: 1px solid red;
-        font-size: 14px;
-        line-height: 24px;
-        > h3 {
-          color: white;
-        }
-        > p {
-          color: #eeeeee;
+          .register {
+            float: right;
+          }
         }
       }
     }
-
-    .footer_address {
-      font-style: normal;
-      color: white;
-      background-color: #003366;
-      p {
-        text-align: center;
-        height: 74px;
-        line-height: 74px;
-      }
+  }
+  /*banner*/
+  .variety_banner{
+    width: 100%;
+    margin-top: 60px;
+    .container{
+      height: 418px;
     }
-
-    /*.container {
-      //border: 1px solid #000;
-      .footer_main {
-        display: flex;
-        justify-content: space-between;
-        padding-top: 50px;
-        margin-bottom: 30px;
-        > div {
+  }
+}
+/*主体*/
+.metal_main{
+  .container{
+    //border: 1px solid #000;
+    margin-bottom: 80px;
+    .main_card{
+      margin-top: 80px;
+      background-color: white;
+      box-shadow:0px 3px 26px 2px rgba(14,72,180,0.08);
+      border-radius:8px;
+      display: flex;
+      flex-flow: column nowrap;
+      align-items: center;
+      text-align: center;
+      .main_card_title{
+        margin-top: 80px;
+        > h2{
+          font-size: 30px;
+          color: #1b1b1b;
+          font-weight: bold;
+        }
+        > span{
           font-size: 14px;
-          line-height: 24px;
-          > a {
-            color: #eeeeee;
-            white-space: nowrap;
-            &:first-child {
-              color: white;
-            }
-            &:hover {
-              color: #ffe6b5;
-            }
-          }
-          > p {
-            color: #eeeeee;
-          }
-        }
-        .footer_logo {
-          > a {
-            width: 87px;
-            height: 25px;
-            //border: 1px solid pink;
-            background: url("../images/logo/home_logo.png") no-repeat;
-            text-indent: -9999px;
-          }
-        }
-        .footer_risk {
-          width: 550px;
-          //height: 135px;
-        }
-        .footer_help {
-          width: 56px;
-          height: 134px;
-        }
-        .footer_account {
-          width: 57px;
-          height: 86px;
-        }
-        .footer_about_us {
-          width: 56px;
-          height: 110px;
+          color: #585858;
+          display: block;
+          margin-top: 12px;
         }
       }
-      .footer_policy {
-        //border: 1px solid white;
-        margin-top: 30px;
-        margin-bottom: 30px;
+      .main_card_detail{
+        width: 1000px;
         font-size: 14px;
+        color: #505050;
         line-height: 24px;
-        > h3 {
-          color: white;
-        }
-        > p {
-          color: #eeeeee;
+        text-align: left;
+        margin-bottom: 150px;
+        > p{
+          margin-top: 35px;
+          &:first-child{
+            margin-top: 50px;
+          }
         }
       }
-    }*/
-    /*.footer_line {
-      width: 100%;
-      height: 1px;
-      background-color: #ffe6b5;
-    }*/
+      .main_product{
+        .product_tab{
+          display: flex;
+          .product_column{
+            text-align: center;
+            line-height: 60px;
+            color: #585858;
+            font-size: 16px;
+            .product_name{
+              background-color: #003366;
+              color: #83B4E5;
+              font-size: 19px;
+            }
+            &:first-child{
+              width: 185px;
+              .product_gold{
+                border-left: 1px solid #E6E6E6;
+              }
+              .product_silver{
+                border-left: 1px solid #E6E6E6;
+              }
+            }
+            &:nth-child(2){
+              width: 124px;
+            }
+            &:nth-child(3){
+              //flex: 1;
+              width: 349px;
+            }
+            &:last-child{
+              //width: 433px;
+              flex: 1;
+              .product_name{
+                border-right: 1px solid #0E48B4;
+              }
+              .product_time{
+                height: 121px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                color: #505050;
+                .time_container{
+                  display: flex;
+                  flex-flow: column nowrap;
+                  justify-content: space-between;
+                  text-align: left;
+                  font-size: 14px;
+                  line-height: 24px;
+                  //margin-top: -8px;
+                  padding-left: 30px;
+                  padding-right: 30px;
+                }
+              }
+            }
+            > div{
+              height: 60px;
+              //border: 1px solid #000;
+              border-right: 1px solid #E6E6E6;
+              border-bottom: 1px solid #E6E6E6;
+              background-color: white;
+            }
+            .product_gold{
+              color: #505050;
+            }
+            .product_silver{
+              color: #505050;
+            }
+          }
+        }
+        .product_explain{
+          height: 56px;
+          background-color: #F0F2F7;
+          text-align: center;
+          line-height: 56px;
+          font-size: 14px;
+          color: #FF1818;
+          margin-bottom: 150px;
+        }
+      }
+    }
   }
 }
